@@ -16,11 +16,7 @@ export default function WikiTOC() {
     {
       num: "1",
       title: "Academic background",
-      href: "academic",
-      subs: [
-        { num: "1.1", title: "Institutional standing", href: "academic" },
-        { num: "1.2", title: "Core focus areas", href: "academic" }
-      ]
+      href: "academic"
     },
     {
       num: "2",

@@ -32,21 +32,6 @@ export default function AcademicSection() {
           ))}
         </tbody>
       </table>
-
-      {/* Academic Focus Areas */}
-      <div className="mt-4">
-        <h3 className="text-sm font-bold uppercase tracking-wider text-gray-800 mb-2">
-          Core Academic Disciplines
-        </h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-[#202122]">
-          {academicData.focusAreas.map((area, idx) => (
-            <li key={idx} className="leading-relaxed">
-              <strong>{area.title}:</strong>{" "}
-              <span className="text-gray-800">{area.description}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }
