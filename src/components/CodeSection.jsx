@@ -76,14 +76,14 @@ export default function CodeSection() {
       </table>
 
       {/* Programming Languages & Tooling (Wikipedia Style with Language as Subject) */}
-      <div className="mt-5 pt-1">
-        <h3 className="text-sm font-bold text-gray-900 mb-2.5 font-sans uppercase tracking-wider">
+      <div className="mt-4 pt-1">
+        <h3 className="text-xs font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
           Programming Languages & Tooling
         </h3>
-        <ul className="list-disc pl-5 space-y-2 text-[14px] text-[#202122] leading-relaxed">
+        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-800 leading-relaxed">
           {codeData.languages.map((lang, idx) => (
             <li key={idx}>
-              <strong>{lang.name}</strong> — {lang.context}
+              <strong className="text-gray-950 font-semibold">{lang.name}</strong> — {lang.context}
             </li>
           ))}
         </ul>
