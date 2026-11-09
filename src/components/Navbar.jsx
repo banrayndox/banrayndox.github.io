@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { scrollToTarget } from '../utils/scrollToSection.js';
-import { profileData } from '../data/profile.js';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,10 +14,8 @@ export default function Navbar() {
     { label: "Projects", id: "projects" },
     { label: "Research", id: "research" },
     { label: "Competitions", id: "competitive-programming" },
-    { label: "Writing", id: "writing" },
     { label: "Code", id: "code" },
     { label: "Languages", id: "languages" },
-    { label: "Contact", id: "contact" },
   ];
 
   const handleNavClick = (e, targetId) => {
@@ -55,15 +52,6 @@ export default function Navbar() {
           >
             Article
           </button>
-          <a
-            href={profileData.resumeUrl || "/resume.pdf"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline text-[#0645ad] font-medium text-xs cursor-pointer flex items-center gap-0.5"
-            title="Download or view Rakib Biswash Resume"
-          >
-            Resume ↗
-          </a>
           <button
             type="button"
             onClick={(e) => handleNavClick(e, 'contact')}
