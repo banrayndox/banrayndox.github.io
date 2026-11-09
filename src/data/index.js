@@ -1,0 +1,10 @@
+export { profileData } from './profile.js';
+export { academicData } from './academic.js';
+export { professionalData } from './professional.js';
+export { projectsData } from './projects.js';
+export { interestsData } from './interests.js';
+export { competitiveProgrammingData } from './competitiveProgramming.js';
+export { newsData } from './news.js';
+export { articlesData } from './articles.js';
+export { codeData } from './code.js';
+export { contactData } from './contact.js';
