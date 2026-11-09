@@ -19,14 +19,14 @@ export default function CompetitiveProgrammingSection() {
         {competitiveProgrammingData.overview}
       </p>
 
-      {/* Contest Standings Table */}
+      {/* Contest & Hackathon Standings Table */}
       <h3 className="text-sm font-bold text-gray-900 mb-2">
-        Contest Standings & Awards
+        Contest Standings & Hackathon Honours
       </h3>
       <table className="wikitable mb-5">
         <thead>
           <tr>
-            <th className="w-1/3">Contest</th>
+            <th className="w-2/5">Competition / Event</th>
             <th className="w-1/6">Edition</th>
             <th className="w-1/4">Award / Standing</th>
             <th>Organizer</th>
@@ -35,10 +35,15 @@ export default function CompetitiveProgrammingSection() {
         <tbody>
           {competitiveProgrammingData.achievements.map((item, idx) => (
             <tr key={idx}>
-              <td className="font-bold">{item.contest}</td>
-              <td className="font-mono text-xs">{item.edition}</td>
-              <td className="text-xs">
-                <strong>{item.award}</strong>
+              <td>
+                <span className="font-bold block text-xs sm:text-[13.5px]">{item.contest}</span>
+                <span className="text-[11.5px] text-gray-600 block mt-0.5 leading-snug">
+                  {item.details}
+                </span>
+              </td>
+              <td className="font-mono text-xs whitespace-nowrap">{item.edition}</td>
+              <td className="text-xs font-semibold whitespace-nowrap">
+                {item.award}
               </td>
               <td className="text-xs text-gray-700">{item.organizer}</td>
             </tr>

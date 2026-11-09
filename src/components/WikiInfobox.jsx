@@ -154,7 +154,11 @@ export default function WikiInfobox() {
               Honours
             </th>
             <td className="text-xs text-gray-900">
-              Podium Finisher, BreakOut Algorithm Contest (2026)
+              <ul className="list-disc pl-4 space-y-0.5 m-0">
+                <li><strong>Champion</strong>, DIU Modal-X AI Hackathon (2026)</li>
+                <li><strong>Runner-Up</strong>, BreakOut Algorithm Contest (2026)</li>
+                <li><strong>Runner-Up</strong>, DIU Codetrap Contest (2025)</li>
+              </ul>
             </td>
           </tr>
 
