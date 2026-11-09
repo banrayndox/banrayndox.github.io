@@ -46,26 +46,6 @@ export default function Introduction() {
           ))}
         </div>
 
-        {/* Quick Links Bar */}
-        <div className="mt-4 pt-2.5 pb-2 border-y border-[#eaecf0] text-xs text-gray-700 flex flex-wrap items-center gap-x-3 gap-y-1 font-sans">
-          <span className="font-bold text-gray-900">Direct Links:</span>
-          {profileData.quickLinks.map((link, idx) => (
-            <React.Fragment key={link.label}>
-              <a
-                href={link.url}
-                target={link.url.startsWith('http') ? "_blank" : undefined}
-                rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                className="text-[#0645ad] hover:underline font-medium"
-              >
-                [{link.label}]
-              </a>
-              {idx < profileData.quickLinks.length - 1 && (
-                <span className="text-gray-300">·</span>
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-
         {/* Wikipedia Table of Contents */}
         <WikiTOC />
       </div>

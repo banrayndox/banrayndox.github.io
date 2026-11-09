@@ -7,6 +7,7 @@ export const profileData = {
   title: "Computer Science & Engineering Student | Software Developer | AI Enthusiast",
   institution: "Daffodil International University",
   location: "Dhaka, Bangladesh",
+  resumeUrl: "/resume.pdf",
   
   // Profile Photo configuration:
   // To use your actual photograph:
