@@ -75,26 +75,31 @@ export default function CodeSection() {
         </tbody>
       </table>
 
-      {/* Programming Languages Wikitable */}
-      <h3 className="text-sm font-bold text-gray-900 mb-2">
-        Programming Languages & Tooling
-      </h3>
-      <table className="wikitable mb-5">
-        <thead>
-          <tr>
-            <th className="w-1/4">Language</th>
-            <th>Application Context & Use Cases</th>
-          </tr>
-        </thead>
-        <tbody>
-          {codeData.languages.map((lang, idx) => (
-            <tr key={idx}>
-              <td className="font-bold font-mono text-xs">{lang.name}</td>
-              <td className="text-xs text-gray-800">{lang.context}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {/* Languages & Technical Environment (Authentic Wikipedia Encyclopedic Prose) */}
+      <div className="mt-5 pt-2 border-t border-[#eaecf0]">
+        <h3 className="text-sm font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
+          Languages & Technical Environment
+        </h3>
+        <div className="space-y-2.5 text-xs sm:text-[14px] text-[#202122] leading-relaxed">
+          <p>
+            Biswash writes software primarily using <strong>C++</strong>, <strong>JavaScript</strong>, <strong>Python</strong>, <strong>C</strong>, and <strong>Java</strong>, structuring language selection around algorithmic efficiency and architectural requirements:
+          </p>
+          <ul className="list-disc pl-5 space-y-1.5">
+            <li>
+              <strong>Algorithmic Problem Solving:</strong> Relies primarily on <strong>C++</strong> for competitive programming contests, leveraging the Standard Template Library (STL) data structures, predictable runtime, and deterministic memory control.
+            </li>
+            <li>
+              <strong>Full-Stack Development:</strong> Constructs web applications and campus services using <strong>JavaScript</strong>, building modular user interfaces with React and server-side RESTful APIs with Node.js and Express.
+            </li>
+            <li>
+              <strong>Data Engineering & Machine Learning:</strong> Employs <strong>Python</strong> across data engineering pipelines, focusing on dataset preprocessing, feature engineering, and data preparation leading up to model training.
+            </li>
+            <li>
+              <strong>Systems Programming & Foundations:</strong> Conducts academic coursework and explores low-level computing concepts using <strong>C</strong> (POSIX socket networking and manual memory allocation) and <strong>Java</strong> (object-oriented software design and design patterns).
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }
