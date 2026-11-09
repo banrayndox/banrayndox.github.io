@@ -95,21 +95,6 @@ export default function CodeSection() {
           ))}
         </tbody>
       </table>
-
-      {/* Systems Experiments */}
-      <div>
-        <h3 className="text-sm font-bold text-gray-900 mb-2">
-          Systems & Experimental Prototypes
-        </h3>
-        <ul className="list-disc pl-5 space-y-1 text-xs text-[#202122]">
-          {codeData.experiments.map((exp, idx) => (
-            <li key={idx}>
-              <strong>{exp.title}: </strong>
-              <span className="text-gray-800">{exp.description}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }

@@ -55,20 +55,5 @@ export const codeData = {
       url: "https://github.com/banrayndox/competitive-programming",
       topics: ["algorithms", "codeforces", "data-structures", "cpp"]
     }
-  ],
-
-  experiments: [
-    {
-      title: "Stateful Agent Cycles in RAG",
-      description: "Investigating token efficiency and convergence rate when looping through query transformation nodes in LangGraph."
-    },
-    {
-      title: "POSIX Thread Pool Architectures",
-      description: "Measuring response latencies under concurrent load when comparing thread-per-connection vs synchronized work queue models."
-    },
-    {
-      title: "Vector Quantization for Local Embeddings",
-      description: "Testing minimal-footprint embedding models running on CPU-constrained server instances for campus documents."
-    }
   ]
 };
