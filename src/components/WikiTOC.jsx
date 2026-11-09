@@ -56,7 +56,7 @@ export default function WikiTOC() {
     },
     {
       num: "8",
-      title: "Contact & channels",
+      title: "Contact & external links",
       href: "contact"
     }
   ];
