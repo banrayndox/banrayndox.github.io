@@ -50,12 +50,6 @@ export const competitiveProgrammingData = {
       description: "Data structures, graph traversals, and dynamic programming interview problems."
     },
     {
-      platform: "CodeChef",
-      handle: "banrayndox",
-      url: "https://www.codechef.com/users/banrayndox",
-      description: "Starters and rated algorithmic rounds."
-    },
-    {
       platform: "GitHub",
       handle: "banrayndox",
       url: "https://github.com/banrayndox",
