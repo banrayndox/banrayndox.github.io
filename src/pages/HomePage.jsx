@@ -9,7 +9,6 @@ import CompetitiveProgrammingSection from '../components/CompetitiveProgrammingS
 import WritingSection from '../components/WritingSection.jsx';
 import CodeSection from '../components/CodeSection.jsx';
 import ContactSection from '../components/ContactSection.jsx';
-import ReferencesSection from '../components/ReferencesSection.jsx';
 
 export default function HomePage() {
   const location = useLocation();
@@ -37,7 +36,6 @@ export default function HomePage() {
       <WritingSection />
       <CodeSection />
       <ContactSection />
-      <ReferencesSection />
     </div>
   );
 }

@@ -73,11 +73,6 @@ export default function WikiTOC() {
       num: "8",
       title: "Contact & channels",
       href: "contact"
-    },
-    {
-      num: "9",
-      title: "References & citations",
-      href: "references"
     }
   ];
 

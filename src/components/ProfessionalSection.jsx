@@ -44,9 +44,6 @@ export default function ProfessionalSection() {
             </h3>
             <p className="text-[14px] text-[#202122] leading-relaxed mb-2">
               {item.description}
-              {item.type.includes("Ambassador") && (
-                <a href="#ref-2" className="reference-bracket text-[#0645ad]">[2]</a>
-              )}
             </p>
             {item.highlights && item.highlights.length > 0 && (
               <ul className="list-disc pl-5 space-y-0.5 text-xs text-gray-700">

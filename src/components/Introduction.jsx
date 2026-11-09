@@ -38,7 +38,7 @@ export default function Introduction() {
         {/* Lead Encyclopedic Paragraphs */}
         <div className="space-y-3 text-[14.5px] leading-relaxed text-[#202122]">
           <p>
-            <strong>{profileData.name}</strong> is a Computer Science and Engineering undergraduate student, full-stack software developer, and artificial intelligence practitioner based in Dhaka, Bangladesh<a href="#ref-1" className="reference-bracket text-[#0645ad]">[1]</a>. He currently serves as Bangladesh Campus Ambassador for CleverCreator AI<a href="#ref-2" className="reference-bracket text-[#0645ad]">[2]</a> and has developed campus platforms including <em>DIU Copilot</em> and <em>CodeReady AI</em><a href="#ref-4" className="reference-bracket text-[#0645ad]">[4]</a>.
+            <strong>{profileData.name}</strong> is a Computer Science and Engineering undergraduate student, full-stack software developer, and artificial intelligence practitioner based in Dhaka, Bangladesh. He currently serves as Bangladesh Campus Ambassador for CleverCreator AI and has developed campus platforms including <em>DIU Copilot</em> and <em>CodeReady AI</em>.
           </p>
 
           {profileData.bioParagraphs.map((paragraph, idx) => (

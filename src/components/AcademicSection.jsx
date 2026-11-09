@@ -10,7 +10,7 @@ export default function AcademicSection() {
       {/* Encyclopedic text */}
       <div className="mb-4 text-[#202122] text-[14.5px] leading-relaxed">
         <p className="mb-2.5">
-          Rakib Biswash is currently enrolled in the <strong>{academicData.degree}</strong> program at <strong>{academicData.institution}</strong> in {academicData.location}<a href="#ref-1" className="reference-bracket text-[#0645ad]">[1]</a>. As of the 2026 academic calendar, he is in his <strong>{academicData.currentStatus}</strong>.
+          Rakib Biswash is currently enrolled in the <strong>{academicData.degree}</strong> program at <strong>{academicData.institution}</strong> in {academicData.location}. As of the 2026 academic calendar, he is in his <strong>{academicData.currentStatus}</strong>.
         </p>
         <p>
           {academicData.overview}

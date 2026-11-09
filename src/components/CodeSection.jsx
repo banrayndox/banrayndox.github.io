@@ -20,8 +20,7 @@ export default function CodeSection() {
           className="text-[#0645ad] hover:underline font-mono font-bold"
         >
           @{codeData.githubUsername}
-        </a>
-        <a href="#ref-5" className="reference-bracket text-[#0645ad]">[5]</a>.
+        </a>.
       </p>
 
       {/* Wikipedia Style Repositories Table */}

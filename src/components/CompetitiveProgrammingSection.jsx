@@ -39,7 +39,6 @@ export default function CompetitiveProgrammingSection() {
               <td className="font-mono text-xs">{item.edition}</td>
               <td className="text-xs">
                 <strong>{item.award}</strong>
-                <a href="#ref-3" className="reference-bracket text-[#0645ad]">[3]</a>
               </td>
               <td className="text-xs text-gray-700">{item.organizer}</td>
             </tr>
