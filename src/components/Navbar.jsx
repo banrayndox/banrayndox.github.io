@@ -63,19 +63,11 @@ export default function Navbar() {
           <span className="text-gray-300">|</span>
           <button
             type="button"
-            onClick={(e) => handleNavClick(e, 'about')}
-            className="font-bold text-black border-b-2 border-[#0645ad] pb-0.5 cursor-pointer bg-transparent border-t-0 border-x-0 p-0 text-xs"
+            onClick={(e) => handleNavClick(e, 'writing')}
+            className="hover:underline text-[#0645ad] cursor-pointer bg-transparent border-0 p-0 text-xs"
           >
-            Read
+            Writing
           </button>
-          <a
-            href="https://github.com/banrayndox"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline text-[#0645ad] cursor-pointer"
-          >
-            View source ↗
-          </a>
         </div>
       </div>
 
