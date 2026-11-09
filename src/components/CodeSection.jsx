@@ -46,21 +46,9 @@ export default function CodeSection() {
               </span>
             </div>
 
-            <p className="text-xs sm:text-[13px] text-gray-800 mt-0.5 mb-1.5 leading-relaxed">
+            <p className="text-xs sm:text-[13px] text-gray-800 mt-0.5 leading-relaxed">
               {repo.description}
             </p>
-
-            <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-gray-600">
-              <span className="text-gray-400">Topics:</span>
-              {repo.topics.map((t) => (
-                <span
-                  key={t}
-                  className="bg-[#f8f9fa] border border-[#d1d5db] text-gray-700 px-1.5 py-0.2 rounded-xs"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
           </li>
         ))}
       </ul>
