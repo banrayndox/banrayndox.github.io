@@ -203,6 +203,36 @@ export default function WikiInfobox() {
               </a>
             </td>
           </tr>
+          <tr className="border-b border-[#eaecf0]">
+            <th scope="row" className="text-xs font-bold text-gray-800">
+              Facebook
+            </th>
+            <td className="text-xs">
+              <a href="https://facebook.com/banrayndox" target="_blank" rel="noopener noreferrer">
+                banrayndox ↗
+              </a>
+            </td>
+          </tr>
+          <tr className="border-b border-[#eaecf0]">
+            <th scope="row" className="text-xs font-bold text-gray-800">
+              Instagram
+            </th>
+            <td className="text-xs">
+              <a href="https://instagram.com/banrayndox" target="_blank" rel="noopener noreferrer">
+                @banrayndox ↗
+              </a>
+            </td>
+          </tr>
+          <tr className="border-b border-[#eaecf0]">
+            <th scope="row" className="text-xs font-bold text-gray-800">
+              YouTube
+            </th>
+            <td className="text-xs">
+              <a href="https://youtube.com/@banrayndox" target="_blank" rel="noopener noreferrer">
+                @banrayndox ↗
+              </a>
+            </td>
+          </tr>
           <tr>
             <th scope="row" className="text-xs font-bold text-gray-800">
               Contact

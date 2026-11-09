@@ -1,13 +1,14 @@
 /**
  * Contact Information & Social Channels
+ * All social handles set to: banrayndox
  */
 export const contactData = {
   message: "Interested in software engineering, AI, or building something meaningful? Feel free to get in touch.",
   channels: [
     {
       label: "Email",
-      value: "rakib.biswash.dev@gmail.com",
-      url: "mailto:rakib.biswash.dev@gmail.com",
+      value: "banrayndox@gmail.com",
+      url: "mailto:banrayndox@gmail.com",
       hint: "Preferred for academic inquiries, collaborations, and opportunities"
     },
     {
@@ -23,9 +24,27 @@ export const contactData = {
       hint: "Open source repositories & development logs"
     },
     {
+      label: "Facebook",
+      value: "facebook.com/banrayndox",
+      url: "https://facebook.com/banrayndox",
+      hint: "Social profile & community connections"
+    },
+    {
+      label: "Instagram",
+      value: "instagram.com/banrayndox",
+      url: "https://instagram.com/banrayndox",
+      hint: "Personal updates & creative logs"
+    },
+    {
+      label: "YouTube",
+      value: "youtube.com/@banrayndox",
+      url: "https://youtube.com/@banrayndox",
+      hint: "Technical walkthroughs & software project demonstrations"
+    },
+    {
       label: "WhatsApp",
-      value: "+880 1XXXXXXXXX", // Rakib can enter actual phone number here
-      url: "https://wa.me/8801700000000",
+      value: "+880 1774474966",
+      url: "https://wa.me/8801774474966",
       hint: "Direct messaging for urgent inquiries"
     }
   ]
