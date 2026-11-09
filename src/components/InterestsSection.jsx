@@ -5,32 +5,44 @@ import { interestsData } from '../data/interests.js';
 export default function InterestsSection() {
   return (
     <section>
-      <SectionHeading id="research" title="Research & technical interests" subtitle="Academic exploration" />
+      <SectionHeading id="research" title="Research & technical interests" subtitle="Focus areas & aspirations" />
 
-      <p className="text-xs text-[#54595d] italic mb-4">
-        {interestsData.disclaimer}
+      <p className="text-[14px] text-[#202122] leading-relaxed mb-3">
+        {interestsData.statement}
       </p>
 
-      <div className="space-y-6">
-        {interestsData.categories.map((cat, idx) => (
-          <div key={idx} className="pb-4 border-b border-[#eaecf0] last:border-b-0">
-            <h3 className="text-sm font-bold text-gray-900 mb-1">
-              {cat.name}
-            </h3>
-            <p className="text-xs text-gray-600 mb-2.5">
-              {cat.summary}
-            </p>
+      {/* Concise Wikipedia Focus Table */}
+      <table className="wikitable my-3">
+        <thead>
+          <tr>
+            <th className="w-1/4">Field / Focus</th>
+            <th className="w-1/5">Category</th>
+            <th>Scope & Technical Direction</th>
+          </tr>
+        </thead>
+        <tbody>
+          {interestsData.areas.map((area, idx) => (
+            <tr key={idx} className={idx === 0 ? "bg-[#fdfefe]" : ""}>
+              <td className="font-bold text-xs sm:text-[13.5px]">
+                {area.title}
+              </td>
+              <td className="text-xs font-mono text-gray-700">
+                <span className={idx === 0 ? "font-bold text-blue-900" : ""}>
+                  {area.badge}
+                </span>
+              </td>
+              <td className="text-xs sm:text-[13px] text-[#202122] leading-relaxed">
+                {area.summary}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-            <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13.5px] text-[#202122]">
-              {cat.topics.map((topic, tIdx) => (
-                <li key={tIdx} className="leading-relaxed">
-                  <strong>{topic.name}:</strong>{" "}
-                  <span className="text-gray-800">{topic.note}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      {/* Core Research Aspiration Box */}
+      <div className="p-3 bg-[#f8f9fa] border-l-3 border-[#a2a9b1] text-xs sm:text-[13px] text-gray-800 leading-relaxed my-2">
+        <strong className="text-black font-semibold">Academic Direction: </strong>
+        While actively building full-stack and AI software systems, my core long-term research interest lies in <strong>algorithms and theoretical computer science</strong> — specifically investigating algorithmic optimization, computational complexity boundaries, and novel data structure designs.
       </div>
     </section>
   );

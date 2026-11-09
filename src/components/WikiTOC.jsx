@@ -42,12 +42,7 @@ export default function WikiTOC() {
     {
       num: "4",
       title: "Research & technical interests",
-      href: "research",
-      subs: [
-        { num: "4.1", title: "Artificial intelligence & agentic systems", href: "research" },
-        { num: "4.2", title: "Software engineering & backend architecture", href: "research" },
-        { num: "4.3", title: "Computer science & algorithmic foundations", href: "research" }
-      ]
+      href: "research"
     },
     {
       num: "5",
