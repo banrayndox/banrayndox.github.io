@@ -4,35 +4,45 @@ import { contactData } from '../data/contact.js';
 
 /**
  * Contact & External Links Section
- * Formatted as an authentic Wikipedia "External links & Correspondence" list (no table).
+ * Formatted strictly according to Wikipedia's biographical "External links" convention:
+ * clean named hyperlinked entries without verbose descriptions or raw unformatted URLs.
  */
 export default function ContactSection() {
   return (
     <section>
-      <SectionHeading id="contact" title="Contact & external links" subtitle="Communication & profiles" />
+      <SectionHeading id="contact" title="Contact & external links" subtitle="Correspondence & web profiles" />
 
-      <p className="text-[14px] text-[#202122] leading-relaxed mb-3">
-        {contactData.message}
+      <p className="text-[14.5px] text-[#202122] leading-relaxed mb-3.5">
+        Rakib Biswash may be contacted directly via email at{" "}
+        <a
+          href={`mailto:${contactData.email}`}
+          className="text-[#0645ad] hover:underline font-mono"
+        >
+          {contactData.email}
+        </a>{" "}
+        or through WhatsApp at{" "}
+        <a
+          href={contactData.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0645ad] hover:underline font-mono"
+        >
+          {contactData.phone}
+        </a>.
       </p>
 
-      {/* Wikipedia Style External Links & Channels List */}
-      <ul className="list-disc pl-5 space-y-2 text-xs sm:text-[14px] text-[#202122] leading-relaxed">
-        {contactData.channels.map((ch, idx) => (
-          <li key={idx}>
-            <strong className="text-black">{ch.label}:</strong>{" "}
+      {/* Wikipedia Style External Links */}
+      <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13.5px] text-[#202122] leading-relaxed">
+        {contactData.externalLinks.map((link) => (
+          <li key={link.url}>
             <a
-              href={ch.url}
-              target={ch.url.startsWith('http') ? "_blank" : undefined}
-              rel={ch.url.startsWith('http') ? "noopener noreferrer" : undefined}
-              className="text-[#0645ad] hover:underline font-mono"
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0645ad] hover:underline"
             >
-              {ch.value} {ch.url.startsWith('http') ? "↗" : ""}
+              {link.title}
             </a>
-            {ch.hint && (
-              <span className="text-gray-600 text-xs sm:text-[13px] ml-1.5">
-                — {ch.hint}
-              </span>
-            )}
           </li>
         ))}
       </ul>
