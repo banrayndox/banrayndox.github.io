@@ -32,11 +32,8 @@ export default function ProjectsSection() {
                   — {project.subtitle}
                 </span>
               </h3>
-              <div className="flex items-center gap-1.5 text-xs text-gray-600 font-mono self-start sm:self-auto">
-                <span className="bg-[#f8f9fa] border border-[#d1d5db] text-gray-700 px-1.5 py-0.5 rounded text-[11px]">
-                  {project.category}
-                </span>
-                <span className="text-gray-500 font-semibold font-mono">({project.year})</span>
+              <div className="text-xs text-gray-500 font-mono self-start sm:self-auto">
+                ({project.year})
               </div>
             </div>
 
