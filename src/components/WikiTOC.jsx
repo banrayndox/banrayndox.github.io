@@ -34,9 +34,8 @@ export default function WikiTOC() {
       subs: [
         { num: "3.1", title: "DIU Copilot", href: "diu-copilot" },
         { num: "3.2", title: "DIU Class Coordination System", href: "diu-class-coordination-system" },
-        { num: "3.3", title: "CodeReady AI", href: "codeready-ai" },
-        { num: "3.4", title: "Online Compiler", href: "online-compiler" },
-        { num: "3.5", title: "C Backend Project", href: "c-backend-project" }
+        { num: "3.3", title: "Online Compiler", href: "online-compiler" },
+        { num: "3.4", title: "C Backend Project", href: "c-backend-project" }
       ]
     },
     {

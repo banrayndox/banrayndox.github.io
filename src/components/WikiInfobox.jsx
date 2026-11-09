@@ -120,15 +120,6 @@ export default function WikiInfobox() {
                 </li>
                 <li>
                   <a
-                    href="#codeready-ai"
-                    onClick={(e) => handleLinkClick(e, 'codeready-ai')}
-                    className="cursor-pointer hover:underline"
-                  >
-                    CodeReady AI
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="#diu-class-coordination-system"
                     onClick={(e) => handleLinkClick(e, 'diu-class-coordination-system')}
                     className="cursor-pointer hover:underline"

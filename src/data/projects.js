@@ -47,26 +47,6 @@ export const projectsData = [
     hasLiveDemo: false,
   },
   {
-    id: "codeready-ai",
-    title: "CodeReady AI",
-    subtitle: "Repository Intelligence Platform",
-    category: "AI & Developer Tooling",
-    year: "2026",
-    description: "An AI-powered platform designed to analyze, parse, and explain large software codebases. Allows engineers to query architectural patterns, trace symbol dependencies, and generate structured documentation directly from Git repositories.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express",
-      "LangGraph",
-      "Groq Llama-3",
-      "Abstract Syntax Trees (AST)"
-    ],
-    contribution: "Developed the core ingestion pipeline for parsing repository tree structures, built AST-informed context window management to handle large file contexts within Groq token limits, and integrated cyclical agent graphs using LangGraph to cross-reference multiple source files before answering.",
-    githubUrl: "https://github.com/banrayndox/codeready-ai",
-    liveUrl: "https://codeready-ai.demo",
-    hasLiveDemo: false,
-  },
-  {
     id: "online-compiler",
     title: "Online Compiler",
     subtitle: "Browser-Based Code Execution Interface",

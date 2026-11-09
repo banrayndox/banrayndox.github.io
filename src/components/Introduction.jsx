@@ -38,7 +38,7 @@ export default function Introduction() {
         {/* Lead Encyclopedic Paragraphs */}
         <div className="space-y-3 text-[14.5px] leading-relaxed text-[#202122]">
           <p>
-            <strong>{profileData.name}</strong> is a Computer Science and Engineering undergraduate student, full-stack software developer, and artificial intelligence practitioner based in Dhaka, Bangladesh. He has developed campus software platforms including <em>DIU Copilot</em> and <em>CodeReady AI</em>.
+            <strong>{profileData.name}</strong> is a Computer Science and Engineering undergraduate student, full-stack software developer, and artificial intelligence practitioner based in Dhaka, Bangladesh. He has developed campus software platforms including <em>DIU Copilot</em> and <em>DIU Class Coordination System</em>.
           </p>
 
           {profileData.bioParagraphs.map((paragraph, idx) => (
