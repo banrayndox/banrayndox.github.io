@@ -55,16 +55,5 @@ export const competitiveProgrammingData = {
       url: "https://github.com/banrayndox",
       description: "Contest templates, C++ algorithmic solution archives, and problem implementations."
     }
-  ],
-
-  // Core topics practiced
-  topicsPracticed: [
-    "Dynamic Programming (1D, 2D, Bitmask, Tree DP)",
-    "Graph Algorithms (BFS/DFS, Dijkstra, Bellman-Ford, Kruskal/Prim)",
-    "Data Structures (Segment Tree, Fenwick Tree, Disjoint Set Union, Trie)",
-    "Number Theory (Sieve of Eratosthenes, Modular Arithmetic, GCD/LCM, Fermat's Little Theorem)",
-    "Binary Search & Monotonic Predicates",
-    "Two Pointers & Sliding Window Invariants",
-    "String Processing (KMP, Hashing)"
   ]
 };

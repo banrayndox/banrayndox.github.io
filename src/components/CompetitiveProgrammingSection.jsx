@@ -77,18 +77,6 @@ export default function CompetitiveProgrammingSection() {
           ))}
         </tbody>
       </table>
-
-      {/* Practiced Topics */}
-      <div>
-        <h3 className="text-sm font-bold text-gray-900 mb-2">
-          Algorithmic Fields & Data Structures
-        </h3>
-        <ul className="list-disc pl-5 space-y-1 text-xs text-[#202122]">
-          {competitiveProgrammingData.topicsPracticed.map((t, idx) => (
-            <li key={idx}>{t}</li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }
