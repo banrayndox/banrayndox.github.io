@@ -11,10 +11,10 @@ export const codeData = {
   
   languages: [
     { name: "C++", context: "Competitive programming, algorithmic problem solving, STL data structures." },
-    { name: "JavaScript / TypeScript", context: "Full-stack web applications, React frontends, Node.js & Express REST APIs." },
-    { name: "Python", context: "FastAPI services, AI workflows, LangGraph agent pipelines, ChromaDB vector indexing." },
-    { name: "C", context: "Systems programming, POSIX socket servers, low-level memory and process management." },
-    { name: "SQL", context: "Relational database schema modeling, indexing, and transactional queries (PostgreSQL/MySQL)." }
+    { name: "JavaScript", context: "Full-stack web applications, React frontends, Node.js & Express REST APIs." },
+    { name: "Python", context: "Data engineering pipelines, data preprocessing, feature engineering up to model training, and AI workflows." },
+    { name: "C", context: "Academic coursework, exploring low-level systems programming, POSIX sockets, and memory management." },
+    { name: "Java", context: "Academic coursework, Object-Oriented Programming (OOP) fundamentals, and software design." }
   ],
 
   // Curated public repositories (used as immediate fallback or offline display)
