@@ -24,7 +24,7 @@ export const profileData = {
   bioParagraphs: [
     "Hi, I'm Rakib — a Computer Science and Engineering student, software developer, and AI enthusiast at Daffodil International University, Bangladesh.",
     "I'm interested in building software systems, exploring artificial intelligence, solving algorithmic problems, and understanding how technology works internally.",
-    "I'm currently exploring the intersection of full-stack software engineering and AI application development."
+    "I am deeply passionate about competitive programming, regularly practicing algorithmic problem solving and participating in contests. Alongside contest programming, I am actively exploring the intersection of full-stack software engineering and AI application development."
   ],
 
   // Primary quick links displayed right below the introduction
