@@ -52,20 +52,6 @@ export default function CodeSection() {
           </li>
         ))}
       </ul>
-
-      {/* Programming Languages & Tooling (Wikipedia Style) */}
-      <div className="mt-4 pt-3 border-t border-[#eaecf0]">
-        <h3 className="text-xs font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
-          Programming Languages & Tooling
-        </h3>
-        <ul className="list-disc pl-5 space-y-1 text-xs text-gray-800 leading-relaxed">
-          {codeData.languages.map((lang, idx) => (
-            <li key={idx}>
-              <strong className="text-gray-950 font-semibold">{lang.name}</strong> — {lang.context}
-            </li>
-          ))}
-        </ul>
-      </div>
     </section>
   );
 }

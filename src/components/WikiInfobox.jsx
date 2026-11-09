@@ -149,7 +149,7 @@ export default function WikiInfobox() {
             </td>
           </tr>
           */}
-          <tr className="border-b border-[#eaecf0]">
+          <tr>
             <th scope="row" className="text-xs font-bold text-gray-800">
               Honours
             </th>
@@ -159,83 +159,6 @@ export default function WikiInfobox() {
                 <li><strong>Runner-Up</strong>, BreakOut Algorithm Contest (2026)</li>
                 <li><strong>Runner-Up</strong>, DIU Codetrap Contest (2025)</li>
               </ul>
-            </td>
-          </tr>
-
-          {/* Infobox Subheader: Online presence */}
-          <tr>
-            <th colSpan="2" className="wiki-infobox-header">
-              Web & Profiles
-            </th>
-          </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              GitHub
-            </th>
-            <td className="text-xs">
-              <a href="https://github.com/banrayndox" target="_blank" rel="noopener noreferrer">
-                banrayndox ↗
-              </a>
-            </td>
-          </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              LinkedIn
-            </th>
-            <td className="text-xs">
-              <a href="https://linkedin.com/in/banrayndox" target="_blank" rel="noopener noreferrer">
-                banrayndox ↗
-              </a>
-            </td>
-          </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              Codeforces
-            </th>
-            <td className="text-xs">
-              <a href="https://codeforces.com/profile/banrayndox" target="_blank" rel="noopener noreferrer">
-                banrayndox ↗
-              </a>
-            </td>
-          </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              Facebook
-            </th>
-            <td className="text-xs">
-              <a href="https://facebook.com/banrayndox" target="_blank" rel="noopener noreferrer">
-                banrayndox ↗
-              </a>
-            </td>
-          </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              Instagram
-            </th>
-            <td className="text-xs">
-              <a href="https://instagram.com/banrayndox" target="_blank" rel="noopener noreferrer">
-                @banrayndox ↗
-              </a>
-            </td>
-          </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              YouTube
-            </th>
-            <td className="text-xs">
-              <a href="https://youtube.com/@banrayndox" target="_blank" rel="noopener noreferrer">
-                @banrayndox ↗
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              Contact
-            </th>
-            <td className="text-xs">
-              <a href="mailto:rakib.biswash.dev@gmail.com">
-                rakib.biswash.dev@gmail.com
-              </a>
             </td>
           </tr>
         </tbody>

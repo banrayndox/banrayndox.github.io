@@ -8,6 +8,7 @@ import InterestsSection from '../components/InterestsSection.jsx';
 import CompetitiveProgrammingSection from '../components/CompetitiveProgrammingSection.jsx';
 import WritingSection from '../components/WritingSection.jsx';
 import CodeSection from '../components/CodeSection.jsx';
+import LanguagesSection from '../components/LanguagesSection.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 
 export default function HomePage() {
@@ -35,6 +36,7 @@ export default function HomePage() {
       <CompetitiveProgrammingSection />
       <WritingSection />
       <CodeSection />
+      <LanguagesSection />
       <ContactSection />
     </div>
   );

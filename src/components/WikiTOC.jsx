@@ -56,6 +56,11 @@ export default function WikiTOC() {
     },
     {
       num: "8",
+      title: "Programming languages & tooling",
+      href: "languages"
+    },
+    {
+      num: "9",
       title: "Contact & external links",
       href: "contact"
     }
