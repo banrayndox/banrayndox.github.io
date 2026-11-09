@@ -3,7 +3,7 @@ import SectionHeading from './SectionHeading.jsx';
 
 /**
  * Research & Technical Interests Section
- * Formatted as authentic Wikipedia encyclopedic prose and structured focus list (no table).
+ * Honestly delineating active technical work from prospective core research aspirations.
  */
 export default function InterestsSection() {
   return (
@@ -11,35 +11,44 @@ export default function InterestsSection() {
       <SectionHeading
         id="research"
         title="Research & technical interests"
-        subtitle="Academic exploration & focus"
+        subtitle="Active work & academic aspirations"
       />
 
       <div className="space-y-3 text-[14.5px] text-[#202122] leading-relaxed mb-4">
         <p>
-          Rakib Biswash's academic exploration and technical work center around four core disciplines: <strong>algorithms and theoretical computer science</strong>, <strong>software engineering</strong>, <strong>AI application engineering</strong>, and <strong>competitive programming</strong>.
+          Rakib Biswash is currently actively engaged in three primary technical disciplines: <strong>Software Engineering</strong>, <strong>AI Engineering</strong>, and <strong>Competitive Programming</strong>.
         </p>
 
         <p>
-          While actively designing practical full-stack web architectures and agentic AI pipelines, his primary long-term research aspiration focuses on <strong>algorithms and computational complexity</strong> — specifically investigating algorithmic optimization, graph theory, combinatorial search, and optimal data structure design.
+          He has not formally initiated institutional or academic core research yet; however, his long-term core research aspiration centers on <strong>algorithms and theoretical computer science</strong> — with an academic intent to explore algorithmic optimization, combinatorial problem solving, and asymptotic complexity bounds.
         </p>
       </div>
 
-      <h3 className="text-sm font-bold text-gray-900 mb-2.5 font-sans uppercase tracking-wider">
-        Primary Focus Areas
+      {/* Active Work */}
+      <h3 className="text-xs font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
+        Active Technical Focus
       </h3>
 
-      <ul className="list-disc pl-5 space-y-2.5 text-[14px] text-[#202122] leading-relaxed">
+      <ul className="list-disc pl-5 space-y-2 text-xs sm:text-[13.5px] text-[#202122] leading-relaxed mb-4">
         <li>
-          <strong>Core Research: Algorithms & Theoretical Computing</strong> — Asymptotic complexity analysis, graph traversals, shortest path algorithms, combinatorial optimization, and designing efficient data structures for time- and memory-constrained computing.
+          <strong>Software Engineering (Active):</strong> Architecting full-stack web platforms, designing modular backend services, developing RESTful APIs, and modeling database structures prioritizing reliability and clean code maintainability.
         </li>
         <li>
-          <strong>Software Engineering</strong> — Full-stack system architecture, modular backend service design, RESTful APIs, database schema modeling, and clean software engineering patterns prioritizing reliability and clean abstraction boundaries.
+          <strong>AI Engineering (Active):</strong> Developing practical LLM applications, orchestrating stateful cyclic agents with LangGraph, implementing Retrieval-Augmented Generation (RAG) systems, and embedding documents with ChromaDB.
         </li>
         <li>
-          <strong>AI Engineering</strong> — Large language model (LLM) application engineering, stateful cyclic agent orchestration with LangGraph, Retrieval-Augmented Generation (RAG) systems, dense vector embeddings with ChromaDB, and structured output parsing.
+          <strong>Competitive Programming (Active):</strong> Practicing algorithmic problem-solving under timed contest conditions, two-pointer invariants, dynamic programming, and complexity optimization on platforms like Codeforces and LeetCode.
         </li>
+      </ul>
+
+      {/* Future Research Aspiration */}
+      <h3 className="text-xs font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
+        Future Research Aspiration
+      </h3>
+
+      <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13.5px] text-[#202122] leading-relaxed">
         <li>
-          <strong>Competitive Programming</strong> — Time-constrained algorithmic problem solving, rigorous loop invariant formulation, sliding window mechanics, dynamic programming, and mathematical modeling on platforms like Codeforces and LeetCode.
+          <strong>Algorithms & Theoretical Computer Science (Prospective):</strong> While formal research has not started yet, his primary academic aspiration is to investigate algorithmic optimization, graph algorithms, and optimal data structure representations.
         </li>
       </ul>
     </section>
