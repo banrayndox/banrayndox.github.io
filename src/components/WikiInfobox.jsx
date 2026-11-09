@@ -147,14 +147,17 @@ export default function WikiInfobox() {
               Full-Stack Systems · AI Engineering · Algorithms
             </td>
           </tr>
+          {/* 
+          // Future appointment row template:
           <tr className="border-b border-[#eaecf0]">
             <th scope="row" className="text-xs font-bold text-gray-800">
               Appointments
             </th>
             <td className="text-xs text-gray-900">
-              Bangladesh Campus Ambassador, CleverCreator AI
+              Company / Role Title
             </td>
           </tr>
+          */}
           <tr className="border-b border-[#eaecf0]">
             <th scope="row" className="text-xs font-bold text-gray-800">
               Honours

@@ -25,12 +25,7 @@ export default function WikiTOC() {
     {
       num: "2",
       title: "Professional activities",
-      href: "professional",
-      subs: [
-        { num: "2.1", title: "CleverCreator AI", href: "professional" },
-        { num: "2.2", title: "Student Association", href: "professional" },
-        { num: "2.3", title: "Independent development", href: "professional" }
-      ]
+      href: "professional"
     },
     {
       num: "3",
