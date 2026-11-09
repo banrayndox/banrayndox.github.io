@@ -5,46 +5,44 @@ import { academicData } from '../data/academic.js';
 export default function AcademicSection() {
   return (
     <section>
-      <SectionHeading id="academic" title="Academic" subtitle="Education & Coursework" />
+      <SectionHeading id="academic" title="Academic background" subtitle="Education & coursework" />
 
-      {/* Concise Overview Paragraph */}
-      <div className="mb-6 text-gray-800 text-[15.5px] leading-relaxed">
-        <p className="mb-3">
-          I am an undergraduate student enrolled in the <strong>{academicData.degree}</strong> program at <strong>{academicData.institution}</strong> in {academicData.location}, currently in my <strong>{academicData.currentStatus}</strong>.
+      {/* Encyclopedic text */}
+      <div className="mb-4 text-[#202122] text-[14.5px] leading-relaxed">
+        <p className="mb-2.5">
+          Rakib Biswash is currently enrolled in the <strong>{academicData.degree}</strong> program at <strong>{academicData.institution}</strong> in {academicData.location}<a href="#ref-1" className="reference-bracket text-[#0645ad]">[1]</a>. As of the 2026 academic calendar, he is in his <strong>{academicData.currentStatus}</strong>.
         </p>
         <p>
           {academicData.overview}
         </p>
       </div>
 
-      {/* Wikipedia-style Key Facts Table */}
-      <div className="mb-6 overflow-hidden border border-gray-200 rounded-xs">
-        <table className="academic-table">
-          <tbody>
-            {academicData.details.map((item, idx) => (
-              <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50/60"}>
-                <td className="w-1/3 py-2 px-3 font-medium text-gray-700 text-sm border-r border-gray-200">
-                  {item.label}
-                </td>
-                <td className="w-2/3 py-2 px-3 text-gray-900 text-sm">
-                  {item.value}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {/* Wikipedia Style Table (.wikitable) */}
+      <table className="wikitable my-3">
+        <tbody>
+          {academicData.details.map((item, idx) => (
+            <tr key={idx}>
+              <th scope="row" className="w-1/3">
+                {item.label}
+              </th>
+              <td>
+                {item.value}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-      {/* Academic Interest Focus Areas */}
-      <div>
-        <h3 className="text-base font-semibold text-gray-900 mb-2.5">
-          Core Academic Interests
+      {/* Academic Focus Areas */}
+      <div className="mt-4">
+        <h3 className="text-sm font-bold uppercase tracking-wider text-gray-800 mb-2">
+          Core Academic Disciplines
         </h3>
-        <ul className="list-disc pl-5 space-y-2 text-sm text-gray-800">
+        <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-[#202122]">
           {academicData.focusAreas.map((area, idx) => (
             <li key={idx} className="leading-relaxed">
-              <strong className="text-gray-900 font-medium">{area.title}:</strong>{" "}
-              <span className="text-gray-700">{area.description}</span>
+              <strong>{area.title}:</strong>{" "}
+              <span className="text-gray-800">{area.description}</span>
             </li>
           ))}
         </ul>

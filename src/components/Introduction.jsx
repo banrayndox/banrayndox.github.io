@@ -1,78 +1,64 @@
-import React, { useState } from 'react';
+import React from 'react';
+import WikiInfobox from './WikiInfobox.jsx';
+import WikiTOC from './WikiTOC.jsx';
 import { profileData } from '../data/profile.js';
 
 export default function Introduction() {
-  const [imgSrc, setImgSrc] = useState(profileData.avatar.customPhotoUrl);
-  const [imgFailed, setImgFailed] = useState(false);
-
-  const handleImageError = () => {
-    if (!imgFailed) {
-      setImgFailed(true);
-      // Fallback to the authentic academic vector placeholder
-      setImgSrc('/rakib-placeholder.svg');
-    }
-  };
-
   return (
-    <section id="about" className="pt-8 pb-4 scroll-mt-20">
-      <div className="flex flex-col-reverse md:flex-row md:items-start md:justify-between gap-8">
-        
-        {/* Left: Bio, Headline, and Quick Links */}
-        <div className="flex-1">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-2">
-            {profileData.name}
-          </h1>
+    <section id="about" className="pt-3 pb-4">
+      {/* Wikipedia Page Title & Tagline */}
+      <div className="mb-3">
+        <h1 className="text-2xl sm:text-3xl md:text-[32px] font-serif font-normal text-black border-b border-[#a2a9b1] pb-1 mb-1 tracking-tight">
+          {profileData.name}
+        </h1>
+        <div className="text-xs text-[#54595d] italic">
+          From Rakib's Knowledge Base, the personal engineer's wiki
+        </div>
+      </div>
 
-          <p className="text-sm sm:text-base text-gray-600 font-normal mb-5 leading-relaxed">
-            {profileData.institution} · {profileData.location}
+      {/* Wikipedia Hatnote */}
+      <div className="text-xs text-[#54595d] italic mb-4 pl-3.5 border-l-2 border-[#a2a9b1] py-0.5 bg-[#f8f9fa]">
+        This article is about the software developer and engineering student. For projects and code repositories, see <a href="#projects" className="text-[#0645ad] hover:underline">Selected Projects</a>.
+      </div>
+
+      {/* Main Wikipedia Content Flow with Floated Infobox */}
+      <div className="clearfix">
+        {/* Right-aligned Wikipedia Biographical Infobox */}
+        <WikiInfobox />
+
+        {/* Lead Encyclopedic Paragraphs */}
+        <div className="space-y-3 text-[14.5px] leading-relaxed text-[#202122]">
+          <p>
+            <strong>{profileData.name}</strong> is a Computer Science and Engineering undergraduate student, full-stack software developer, and artificial intelligence practitioner based in Dhaka, Bangladesh<a href="#ref-1" className="reference-bracket text-[#0645ad]">[1]</a>. He currently serves as Bangladesh Campus Ambassador for CleverCreator AI<a href="#ref-2" className="reference-bracket text-[#0645ad]">[2]</a> and has developed campus platforms including <em>DIU Copilot</em> and <em>CodeReady AI</em><a href="#ref-4" className="reference-bracket text-[#0645ad]">[4]</a>.
           </p>
 
-          <div className="space-y-3.5 text-gray-800 text-[15.5px] leading-relaxed">
-            {profileData.bioParagraphs.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
-          </div>
-
-          {/* Quick Academic / Developer Text Links */}
-          <div className="mt-6 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-            <span className="text-gray-500 font-medium">Links:</span>
-            {profileData.quickLinks.map((link, idx) => (
-              <React.Fragment key={link.label}>
-                <a
-                  href={link.url}
-                  target={link.url.startsWith('http') ? "_blank" : undefined}
-                  rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className="font-medium hover:underline inline-flex items-center gap-0.5"
-                  title={link.note || link.label}
-                >
-                  [{link.label}]
-                </a>
-                {idx < profileData.quickLinks.length - 1 && (
-                  <span className="text-gray-300 select-none">·</span>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
+          {profileData.bioParagraphs.map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
         </div>
 
-        {/* Right: Academic Homepage Profile Photograph (Replaceable) */}
-        <div className="shrink-0 self-start">
-          <figure className="m-0 text-center">
-            <div className="w-36 sm:w-44 h-44 sm:h-52 bg-gray-50 border border-gray-300 rounded-xs overflow-hidden shadow-2xs flex items-center justify-center">
-              <img
-                src={imgSrc}
-                alt={profileData.avatar.altText}
-                onError={handleImageError}
-                className="w-full h-full object-cover object-center"
-                loading="eager"
-              />
-            </div>
-            <figcaption className="mt-1.5 text-xs text-gray-500 font-mono">
-              Rakib Biswash
-            </figcaption>
-          </figure>
+        {/* Quick Links Bar */}
+        <div className="mt-4 pt-2.5 pb-2 border-y border-[#eaecf0] text-xs text-gray-700 flex flex-wrap items-center gap-x-3 gap-y-1 font-sans">
+          <span className="font-bold text-gray-900">Direct Links:</span>
+          {profileData.quickLinks.map((link, idx) => (
+            <React.Fragment key={link.label}>
+              <a
+                href={link.url}
+                target={link.url.startsWith('http') ? "_blank" : undefined}
+                rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
+                className="text-[#0645ad] hover:underline font-medium"
+              >
+                [{link.label}]
+              </a>
+              {idx < profileData.quickLinks.length - 1 && (
+                <span className="text-gray-300">·</span>
+              )}
+            </React.Fragment>
+          ))}
         </div>
 
+        {/* Wikipedia Table of Contents */}
+        <WikiTOC />
       </div>
     </section>
   );

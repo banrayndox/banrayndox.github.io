@@ -5,42 +5,42 @@ import { newsData } from '../data/news.js';
 export default function NewsSection() {
   return (
     <section>
-      <SectionHeading id="news" title="News & Updates" subtitle="Chronological Log" />
+      <SectionHeading id="news" title="News & chronological updates" subtitle="Activity log" />
 
-      <p className="text-sm text-gray-600 mb-5 italic">
-        Recent milestones, software releases, competition outcomes, and community updates.
-      </p>
-
-      <div className="space-y-4">
-        {newsData.map((item) => (
-          <div key={item.id} className="flex flex-col sm:flex-row sm:gap-4 pb-3.5 border-b border-gray-100 last:border-b-0 last:pb-0">
-            {/* Date Column */}
-            <div className="sm:w-36 shrink-0 text-xs sm:text-sm font-mono text-gray-500 pt-0.5">
-              {item.date}
-            </div>
-
-            {/* Content Column */}
-            <div className="flex-1">
-              <div className="text-[14.5px] text-gray-900 leading-relaxed">
-                <span className="font-semibold text-gray-950">{item.headline}. </span>
-                <span className="text-gray-700">{item.content}</span>
-                {item.link && (
-                  <span className="ml-1.5 inline-block">
-                    <a
-                      href={item.link.url}
-                      target={item.link.url.startsWith('http') ? "_blank" : undefined}
-                      rel={item.link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                      className="text-xs hover:underline"
-                    >
-                      [{item.link.text}]
-                    </a>
-                  </span>
+      <table className="wikitable my-3">
+        <thead>
+          <tr>
+            <th className="w-1/5 sm:w-1/6">Date</th>
+            <th>Event & Summary</th>
+            <th className="w-1/6">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {newsData.map((item) => (
+            <tr key={item.id}>
+              <td className="font-mono text-xs whitespace-nowrap align-top">{item.date}</td>
+              <td className="align-top text-xs sm:text-[13.5px]">
+                <strong>{item.headline}. </strong>
+                <span className="text-[#202122]">{item.content}</span>
+              </td>
+              <td className="align-top text-xs font-mono">
+                {item.link ? (
+                  <a
+                    href={item.link.url}
+                    target={item.link.url.startsWith('http') ? "_blank" : undefined}
+                    rel={item.link.url.startsWith('http') ? "noopener noreferrer" : undefined}
+                    className="text-[#0645ad] hover:underline"
+                  >
+                    [{item.link.text}]
+                  </a>
+                ) : (
+                  <span className="text-gray-400">—</span>
                 )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
   );
 }

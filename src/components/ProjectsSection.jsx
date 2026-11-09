@@ -5,59 +5,92 @@ import { projectsData } from '../data/projects.js';
 export default function ProjectsSection() {
   return (
     <section>
-      <SectionHeading id="projects" title="Selected Projects" subtitle="Research & Systems Archive" />
+      <SectionHeading id="projects" title="Selected projects" subtitle="Technical systems & software" />
 
-      <p className="text-sm text-gray-600 mb-6 italic">
-        A text-based archive of software systems, campus tools, and algorithmic prototypes.
+      <p className="text-xs text-[#54595d] italic mb-4">
+        Archive of software platforms, campus utilities, and algorithmic prototypes built by Rakib Biswash.
       </p>
 
-      <div className="space-y-8">
+      {/* Wikipedia Projects Index Table */}
+      <table className="wikitable mb-6">
+        <thead>
+          <tr>
+            <th className="w-1/4">Project</th>
+            <th className="w-1/6">Year</th>
+            <th className="w-1/3">Core Stack</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          {projectsData.map((project) => (
+            <tr key={project.id}>
+              <td>
+                <a href={`#${project.id}`} className="font-bold text-[#0645ad] hover:underline">
+                  {project.title}
+                </a>
+              </td>
+              <td className="font-mono text-xs">{project.year}</td>
+              <td className="text-xs font-mono">{project.technologies.slice(0, 4).join(", ")}</td>
+              <td className="text-xs font-mono">
+                {project.githubUrl && (
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="mr-2 text-[#0645ad] hover:underline">
+                    [GitHub]
+                  </a>
+                )}
+                {project.hasLiveDemo && project.liveUrl && (
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-[#0645ad] hover:underline">
+                    [Demo]
+                  </a>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Detailed Project Entries */}
+      <div className="space-y-6">
         {projectsData.map((project) => (
           <article
             key={project.id}
             id={project.id}
-            className="pb-7 border-b border-gray-100 last:border-b-0 last:pb-0"
+            className="pb-5 border-b border-[#eaecf0] last:border-b-0"
           >
-            {/* Title & Tagline */}
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1.5">
-              <h3 className="text-base sm:text-[17px] font-semibold text-gray-900">
+              <h3 className="text-[16px] font-bold text-black">
                 {project.title}
-                <span className="font-normal text-gray-600"> — {project.subtitle}</span>
+                <span className="font-normal text-gray-700"> — {project.subtitle}</span>
               </h3>
-              <span className="text-xs font-mono text-gray-500 shrink-0">
-                {project.category} · {project.year}
+              <span className="text-xs font-mono text-gray-500">
+                {project.year} · {project.category}
               </span>
             </div>
 
-            {/* Description */}
-            <p className="text-[14.5px] text-gray-800 leading-relaxed mb-2.5">
+            <p className="text-[14px] text-[#202122] leading-relaxed mb-2">
               {project.description}
             </p>
 
-            {/* Technologies */}
-            <div className="text-xs sm:text-sm text-gray-700 mb-2 leading-relaxed">
-              <strong className="text-gray-900 font-medium">Technologies:</strong>{" "}
-              <span className="font-mono text-[13px] text-gray-800">
+            <div className="text-xs text-gray-800 mb-1.5 leading-relaxed">
+              <strong className="text-black">Technologies:</strong>{" "}
+              <span className="font-mono text-[12.5px] text-gray-800">
                 {project.technologies.join(", ")}
               </span>
             </div>
 
-            {/* Contribution */}
-            <div className="text-xs sm:text-sm text-gray-700 mb-3 leading-relaxed">
-              <strong className="text-gray-900 font-medium">My Contribution:</strong>{" "}
+            <div className="text-xs text-gray-800 mb-2 leading-relaxed">
+              <strong className="text-black">Contribution:</strong>{" "}
               <span>{project.contribution}</span>
             </div>
 
-            {/* Minimalist Hyperlinks: [GitHub] [Live Demo] */}
-            <div className="text-xs sm:text-sm space-x-3">
+            <div className="text-xs space-x-3">
               {project.githubUrl && (
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium hover:underline"
+                  className="text-[#0645ad] hover:underline font-mono"
                 >
-                  [GitHub]
+                  [GitHub Repository ↗]
                 </a>
               )}
               {project.hasLiveDemo && project.liveUrl && (
@@ -65,9 +98,9 @@ export default function ProjectsSection() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium hover:underline"
+                  className="text-[#0645ad] hover:underline font-mono"
                 >
-                  [Live Demo]
+                  [Live Demonstration ↗]
                 </a>
               )}
             </div>

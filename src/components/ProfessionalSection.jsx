@@ -5,37 +5,51 @@ import { professionalData } from '../data/professional.js';
 export default function ProfessionalSection() {
   return (
     <section>
-      <SectionHeading id="professional" title="Professional" subtitle="Activities & Experience" />
+      <SectionHeading id="professional" title="Professional activities" subtitle="Ambassadorships & engineering" />
 
-      <p className="text-sm text-gray-600 mb-6 italic">
-        A chronological overview of ambassadorships, institutional service, and independent software development.
+      <p className="text-xs text-[#54595d] italic mb-4">
+        A chronological overview of ambassadorship appointments, institutional digital administration, and independent engineering.
       </p>
 
-      <div className="space-y-6">
+      {/* Summary Wikitable */}
+      <table className="wikitable mb-5">
+        <thead>
+          <tr>
+            <th className="w-1/4">Period</th>
+            <th className="w-1/3">Role & Organization</th>
+            <th className="w-1/5">Type</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          {professionalData.map((item, idx) => (
+            <tr key={idx}>
+              <td className="font-mono text-xs">{item.period}</td>
+              <td>
+                <strong>{item.role}</strong>, <em>{item.organization}</em>
+              </td>
+              <td className="text-xs text-gray-700">{item.type}</td>
+              <td className="text-xs">{item.location}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Detailed subsections */}
+      <div className="space-y-4">
         {professionalData.map((item, idx) => (
-          <div key={idx} className="pb-5 border-b border-gray-100 last:border-b-0 last:pb-0">
-            {/* Header Line */}
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
-              <h3 className="text-base font-semibold text-gray-900">
-                {item.role}
-                <span className="font-normal text-gray-600"> — {item.organization}</span>
-              </h3>
-              <div className="flex items-center gap-2 text-xs font-mono text-gray-500">
-                <span className="px-1.5 py-0.5 bg-gray-100 text-gray-700 rounded border border-gray-200">
-                  {item.type}
-                </span>
-                <span>{item.period}</span>
-              </div>
-            </div>
-
-            {/* Description */}
-            <p className="text-[14.5px] text-gray-800 leading-relaxed mt-2 mb-2">
+          <div key={idx} className="pb-3 border-b border-[#eaecf0] last:border-b-0">
+            <h3 className="text-sm font-bold text-gray-900 mb-1">
+              {item.organization} — {item.role}
+            </h3>
+            <p className="text-[14px] text-[#202122] leading-relaxed mb-2">
               {item.description}
+              {item.type.includes("Ambassador") && (
+                <a href="#ref-2" className="reference-bracket text-[#0645ad]">[2]</a>
+              )}
             </p>
-
-            {/* Highlights if any */}
             {item.highlights && item.highlights.length > 0 && (
-              <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm text-gray-700">
+              <ul className="list-disc pl-5 space-y-0.5 text-xs text-gray-700">
                 {item.highlights.map((h, hIdx) => (
                   <li key={hIdx}>{h}</li>
                 ))}

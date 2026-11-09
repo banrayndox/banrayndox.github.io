@@ -5,39 +5,39 @@ import { contactData } from '../data/contact.js';
 export default function ContactSection() {
   return (
     <section>
-      <SectionHeading id="contact" title="Contact" subtitle="Get in Touch" />
+      <SectionHeading id="contact" title="Contact & channels" subtitle="Communication" />
 
-      <p className="text-[15px] text-gray-800 leading-relaxed mb-5">
+      <p className="text-[14px] text-[#202122] leading-relaxed mb-4">
         {contactData.message}
       </p>
 
-      {/* Direct communication links table / list */}
-      <div className="overflow-hidden border border-gray-200 rounded-xs mb-4">
-        <table className="academic-table">
-          <tbody>
-            {contactData.channels.map((ch, idx) => (
-              <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50/60"}>
-                <td className="w-1/4 py-2.5 px-3.5 font-medium text-gray-800 text-sm border-r border-gray-200">
-                  {ch.label}
-                </td>
-                <td className="w-1/2 py-2.5 px-3.5 text-sm">
-                  <a
-                    href={ch.url}
-                    target={ch.url.startsWith('http') ? "_blank" : undefined}
-                    rel={ch.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="font-mono text-[13.5px] hover:underline"
-                  >
-                    {ch.value}
-                  </a>
-                </td>
-                <td className="w-1/4 py-2.5 px-3.5 text-xs text-gray-500 hidden sm:table-cell">
-                  {ch.hint}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <table className="wikitable mb-4">
+        <thead>
+          <tr>
+            <th className="w-1/4">Channel</th>
+            <th className="w-1/3">Address / Handle</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {contactData.channels.map((ch, idx) => (
+            <tr key={idx}>
+              <td className="font-bold text-xs">{ch.label}</td>
+              <td className="font-mono text-xs">
+                <a
+                  href={ch.url}
+                  target={ch.url.startsWith('http') ? "_blank" : undefined}
+                  rel={ch.url.startsWith('http') ? "noopener noreferrer" : undefined}
+                  className="text-[#0645ad] hover:underline"
+                >
+                  {ch.value}
+                </a>
+              </td>
+              <td className="text-xs text-gray-700">{ch.hint}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
   );
 }

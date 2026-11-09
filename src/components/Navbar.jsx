@@ -11,7 +11,9 @@ export default function Navbar() {
     { label: "Academic", anchor: "#academic" },
     { label: "Professional", anchor: "#professional" },
     { label: "Projects", anchor: "#projects" },
-    { label: "Research & Interests", anchor: "#research" },
+    { label: "Research", anchor: "#research" },
+    { label: "Contests", anchor: "#competitive-programming" },
+    { label: "News", anchor: "#news" },
     { label: "Writing", anchor: "#writing" },
     { label: "Code", anchor: "#code" },
     { label: "Contact", anchor: "#contact" },
@@ -22,61 +24,83 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-xs border-b border-gray-200">
-      <div className="max-w-[1020px] mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-14">
-          {/* Left: Name / Home Link */}
-          <div>
-            <Link
-              to="/"
-              className="text-base font-semibold tracking-tight text-gray-900 hover:text-blue-700 hover:no-underline"
-            >
-              Rakib Biswash
-            </Link>
-          </div>
-
-          {/* Right: Minimal text links for desktop */}
-          <nav className="hidden md:flex items-center gap-5 text-sm" aria-label="Main Navigation">
-            {navLinks.map((item) => (
-              <a
-                key={item.label}
-                href={getHref(item.anchor)}
-                className="text-gray-600 hover:text-[#0645ad] transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Mobile hamburger toggle (minimal text toggle) */}
-          <div className="md:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-sm px-2.5 py-1 text-gray-700 border border-gray-300 rounded hover:bg-gray-50 focus:outline-hidden"
-              aria-label="Toggle navigation menu"
-            >
-              {mobileMenuOpen ? "Close" : "Menu"}
-            </button>
-          </div>
+    <header className="bg-white border-b border-[#a2a9b1]">
+      {/* Top Wikipedia Skin Meta Bar */}
+      <div className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-2 pb-1.5 flex items-center justify-between text-xs text-[#54595d] border-b border-[#eaecf0]">
+        <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-1.5 text-black hover:no-underline font-serif font-bold text-sm">
+            <span className="w-5 h-5 bg-[#202122] text-white flex items-center justify-center font-bold text-xs rounded-xs">
+              W
+            </span>
+            <span>Rakib's Wiki</span>
+          </Link>
+          <span className="text-gray-300 hidden sm:inline">|</span>
+          <span className="italic hidden sm:inline">The Engineer's Knowledge Base</span>
         </div>
 
-        {/* Mobile dropdown menu */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden py-3 border-t border-gray-100 flex flex-col space-y-2 text-sm bg-white" aria-label="Mobile Navigation">
+        {/* Wikipedia Header Action Tabs */}
+        <div className="flex items-center gap-3 font-sans">
+          <span className="font-bold text-black border-b-2 border-[#0645ad] pb-0.5">Article</span>
+          <a href="#contact" className="hover:underline text-[#0645ad]">Talk</a>
+          <span className="text-gray-300">|</span>
+          <span className="font-bold text-black border-b-2 border-[#0645ad] pb-0.5">Read</span>
+          <a
+            href="https://github.com/banrayndox"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-[#0645ad]"
+          >
+            View source
+          </a>
+          <a href="#news" className="hover:underline text-[#0645ad]">History</a>
+        </div>
+      </div>
+
+      {/* Main Navigation Row */}
+      <div className="max-w-[1020px] mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs sm:text-[13px]">
+        {/* Desktop Quick Nav */}
+        <nav className="hidden md:flex items-center gap-4 text-gray-700" aria-label="Article sections">
+          {navLinks.map((item) => (
+            <a
+              key={item.label}
+              href={getHref(item.anchor)}
+              className="hover:text-[#0645ad] hover:underline"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Name on mobile + Toggle */}
+        <div className="md:hidden flex items-center justify-between w-full">
+          <span className="font-bold text-gray-900">Contents</span>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-xs px-2 py-0.5 border border-[#a2a9b1] rounded bg-gray-50 text-gray-800"
+          >
+            {mobileMenuOpen ? "[close]" : "[sections]"}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-[#eaecf0] bg-[#f8f9fa] px-4 py-2">
+          <div className="grid grid-cols-2 gap-2 text-xs">
             {navLinks.map((item) => (
               <a
                 key={item.label}
                 href={getHref(item.anchor)}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-2 py-1 text-gray-700 hover:text-[#0645ad] hover:bg-gray-50 rounded"
+                className="py-1 text-[#0645ad] hover:underline"
               >
                 {item.label}
               </a>
             ))}
-          </nav>
-        )}
-      </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

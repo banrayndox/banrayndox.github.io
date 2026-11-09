@@ -7,88 +7,83 @@ export default function CompetitiveProgrammingSection() {
     <section>
       <SectionHeading
         id="competitive-programming"
-        title="Competitive Programming"
-        subtitle="Algorithms & Problem Solving"
+        title="Competitive programming"
+        subtitle="Contests & algorithmic problem solving"
       />
 
-      {/* Quote */}
-      <blockquote className="border-l-2 border-gray-300 pl-4 py-1 mb-5 text-[15px] italic text-gray-700 bg-gray-50/50">
+      <blockquote className="border-l-3 border-[#a2a9b1] pl-3 py-1 mb-4 text-xs sm:text-sm italic text-gray-800 bg-[#f8f9fa]">
         "{competitiveProgrammingData.quote}"
       </blockquote>
 
-      <p className="text-[14.5px] text-gray-800 leading-relaxed mb-6">
+      <p className="text-[14px] text-[#202122] leading-relaxed mb-4">
         {competitiveProgrammingData.overview}
       </p>
 
-      {/* Contest Achievements */}
-      <div className="mb-6">
-        <h3 className="text-base font-semibold text-gray-900 mb-2">
-          Contest Results & Recognitions
-        </h3>
-        <div className="space-y-3">
+      {/* Contest Standings Table */}
+      <h3 className="text-sm font-bold text-gray-900 mb-2">
+        Contest Standings & Awards
+      </h3>
+      <table className="wikitable mb-5">
+        <thead>
+          <tr>
+            <th className="w-1/3">Contest</th>
+            <th className="w-1/6">Edition</th>
+            <th className="w-1/4">Award / Standing</th>
+            <th>Organizer</th>
+          </tr>
+        </thead>
+        <tbody>
           {competitiveProgrammingData.achievements.map((item, idx) => (
-            <div key={idx} className="p-3.5 bg-gray-50 border border-gray-200 rounded-xs">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
-                <span className="font-semibold text-sm text-gray-900">
-                  {item.contest} — <span className="font-normal text-gray-700">{item.edition}</span>
-                </span>
-                <span className="text-xs font-mono font-medium text-blue-900 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded">
-                  {item.award}
-                </span>
-              </div>
-              <p className="text-xs text-gray-500 mb-1">
-                Organized by {item.organizer}
-              </p>
-              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                {item.details}
-              </p>
-            </div>
+            <tr key={idx}>
+              <td className="font-bold">{item.contest}</td>
+              <td className="font-mono text-xs">{item.edition}</td>
+              <td className="text-xs">
+                <strong>{item.award}</strong>
+                <a href="#ref-3" className="reference-bracket text-[#0645ad]">[3]</a>
+              </td>
+              <td className="text-xs text-gray-700">{item.organizer}</td>
+            </tr>
           ))}
-        </div>
-      </div>
+        </tbody>
+      </table>
 
-      {/* Profile Links & Handles */}
-      <div className="mb-6">
-        <h3 className="text-base font-semibold text-gray-900 mb-2">
-          Profiles & Problem Solving Handles
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {/* Online Profiles & Handles Table */}
+      <h3 className="text-sm font-bold text-gray-900 mb-2">
+        Online Evaluator Handles
+      </h3>
+      <table className="wikitable mb-5">
+        <thead>
+          <tr>
+            <th className="w-1/4">Platform</th>
+            <th className="w-1/4">Handle</th>
+            <th>Focus & Activity</th>
+          </tr>
+        </thead>
+        <tbody>
           {competitiveProgrammingData.profiles.map((p, idx) => (
-            <div key={idx} className="p-3 border border-gray-200 rounded-xs bg-white">
-              <div className="flex items-center justify-between mb-1">
-                <span className="text-sm font-semibold text-gray-900">{p.platform}</span>
-                <a
-                  href={p.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-mono hover:underline"
-                >
-                  [{p.handle}] ↗
+            <tr key={idx}>
+              <td className="font-bold">{p.platform}</td>
+              <td className="font-mono text-xs">
+                <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-[#0645ad] hover:underline">
+                  {p.handle} ↗
                 </a>
-              </div>
-              <p className="text-xs text-gray-600">
-                {p.description}
-              </p>
-            </div>
+              </td>
+              <td className="text-xs text-gray-700">{p.description}</td>
+            </tr>
           ))}
-        </div>
-      </div>
+        </tbody>
+      </table>
 
-      {/* Core Topics */}
+      {/* Practiced Topics */}
       <div>
-        <h3 className="text-base font-semibold text-gray-900 mb-2">
-          Algorithmic Areas Practiced
+        <h3 className="text-sm font-bold text-gray-900 mb-2">
+          Algorithmic Fields & Data Structures
         </h3>
-        <div className="flex flex-wrap gap-1.5">
-          {competitiveProgrammingData.topicsPracticed.map((topic, idx) => (
-            <span
-              key={idx}
-              className="text-xs font-mono bg-gray-100 text-gray-800 px-2 py-1 rounded border border-gray-200"
-            >
-              {topic}
-            </span>
+        <ul className="list-disc pl-5 space-y-1 text-xs text-[#202122]">
+          {competitiveProgrammingData.topicsPracticed.map((t, idx) => (
+            <li key={idx}>{t}</li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
