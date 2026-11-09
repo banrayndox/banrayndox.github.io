@@ -61,26 +61,21 @@ export default function WikiTOC() {
     },
     {
       num: "6",
-      title: "News & chronological updates",
-      href: "news"
-    },
-    {
-      num: "7",
       title: "Writing & technical notes",
       href: "writing"
     },
     {
-      num: "8",
+      num: "7",
       title: "Code & open source",
       href: "code"
     },
     {
-      num: "9",
+      num: "8",
       title: "Contact & channels",
       href: "contact"
     },
     {
-      num: "10",
+      num: "9",
       title: "References & citations",
       href: "references"
     }

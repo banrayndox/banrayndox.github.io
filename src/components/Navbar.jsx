@@ -14,7 +14,6 @@ export default function Navbar() {
     { label: "Projects", id: "projects" },
     { label: "Research", id: "research" },
     { label: "Contests", id: "competitive-programming" },
-    { label: "News", id: "news" },
     { label: "Writing", id: "writing" },
     { label: "Code", id: "code" },
     { label: "Contact", id: "contact" },
@@ -77,13 +76,6 @@ export default function Navbar() {
           >
             View source ↗
           </a>
-          <button
-            type="button"
-            onClick={(e) => handleNavClick(e, 'news')}
-            className="hover:underline text-[#0645ad] cursor-pointer bg-transparent border-0 p-0 text-xs"
-          >
-            History
-          </button>
         </div>
       </div>
 
