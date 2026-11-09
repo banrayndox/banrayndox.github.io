@@ -51,32 +51,28 @@ export default function CompetitiveProgrammingSection() {
         </tbody>
       </table>
 
-      {/* Online Profiles & Handles Table */}
-      <h3 className="text-sm font-bold text-gray-900 mb-2">
-        Online Evaluator Handles
-      </h3>
-      <table className="wikitable mb-5">
-        <thead>
-          <tr>
-            <th className="w-1/4">Platform</th>
-            <th className="w-1/4">Handle</th>
-            <th>Focus & Activity</th>
-          </tr>
-        </thead>
-        <tbody>
+      {/* Online Profiles & Handles (Wiki Bulleted List instead of second table) */}
+      <div className="mt-4 pt-1">
+        <h3 className="text-sm font-bold text-gray-900 mb-2">
+          Online Evaluator Profiles & Handles
+        </h3>
+        <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13.5px] text-[#202122]">
           {competitiveProgrammingData.profiles.map((p, idx) => (
-            <tr key={idx}>
-              <td className="font-bold">{p.platform}</td>
-              <td className="font-mono text-xs">
-                <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-[#0645ad] hover:underline">
-                  {p.handle} ↗
-                </a>
-              </td>
-              <td className="text-xs text-gray-700">{p.description}</td>
-            </tr>
+            <li key={idx} className="leading-relaxed">
+              <strong>{p.platform}:</strong>{" "}
+              <a
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0645ad] hover:underline font-mono font-medium"
+              >
+                @{p.handle} ↗
+              </a>{" "}
+              <span className="text-gray-600">— {p.description}</span>
+            </li>
           ))}
-        </tbody>
-      </table>
+        </ul>
+      </div>
     </section>
   );
 }
