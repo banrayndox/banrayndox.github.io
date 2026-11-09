@@ -41,7 +41,7 @@ export default function WikiTOC() {
     },
     {
       num: "5",
-      title: "Competitive programming",
+      title: "Competitive programming & hackathons",
       href: "competitive-programming"
     },
     {

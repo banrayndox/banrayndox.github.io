@@ -7,8 +7,8 @@ export default function CompetitiveProgrammingSection() {
     <section>
       <SectionHeading
         id="competitive-programming"
-        title="Competitive programming"
-        subtitle="Contests & algorithmic problem solving"
+        title="Competitive programming & hackathons"
+        subtitle="Contests, hackathons & algorithmic problem solving"
       />
 
       <blockquote className="border-l-3 border-[#a2a9b1] pl-3 py-1 mb-4 text-xs sm:text-sm italic text-gray-800 bg-[#f8f9fa]">

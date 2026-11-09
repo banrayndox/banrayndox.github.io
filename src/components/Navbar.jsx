@@ -13,7 +13,7 @@ export default function Navbar() {
     { label: "Professional", id: "professional" },
     { label: "Projects", id: "projects" },
     { label: "Research", id: "research" },
-    { label: "Contests", id: "competitive-programming" },
+    { label: "Competitions", id: "competitive-programming" },
     { label: "Writing", id: "writing" },
     { label: "Code", id: "code" },
     { label: "Contact", id: "contact" },
