@@ -3,80 +3,70 @@ import SectionHeading from './SectionHeading.jsx';
 import { codeData } from '../data/code.js';
 
 /**
- * 100% Full Static Code & Repositories Section
- * No network delays, no dynamic fetch spinners, no external API rate-limit dependencies.
+ * Code & Open Source Section
+ * Formatted as an authentic Wikipedia article with prose & structured lists (no tables).
  */
 export default function CodeSection() {
   return (
     <section>
       <SectionHeading id="code" title="Code & open source" subtitle="Repositories & implementations" />
 
-      <p className="text-[14px] text-[#202122] leading-relaxed mb-4">
-        {codeData.overview} Software repositories and algorithmic implementations are maintained publicly under the GitHub handle{" "}
+      <p className="text-[14.5px] text-[#202122] leading-relaxed mb-4">
+        Rakib Biswash maintains public software repositories, systems implementations, and algorithmic problem-solving archives under the GitHub handle{" "}
         <a
           href={codeData.githubProfileUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#0645ad] hover:underline font-mono font-bold"
         >
-          @{codeData.githubUsername}
+          @{codeData.githubUsername} ↗
         </a>.
+        His codebase is structured around modularity, low overhead, and clear architecture.
       </p>
 
-      {/* Wikipedia Style Repositories Table */}
-      <h3 className="text-sm font-bold text-gray-900 mb-2">
+      {/* Selected Repositories - Article/Wiki List Format */}
+      <h3 className="text-xs font-bold text-gray-900 mb-2.5 font-sans uppercase tracking-wider">
         Selected Software Repositories
       </h3>
-      <table className="wikitable mb-6">
-        <thead>
-          <tr>
-            <th className="w-1/4">Repository</th>
-            <th className="w-1/6">Language</th>
-            <th>Description & Topics</th>
-            <th className="w-1/6">Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          {codeData.curatedRepositories.map((repo) => (
-            <tr key={repo.name}>
-              <td className="font-bold font-mono text-xs">
-                <a
-                  href={repo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0645ad] hover:underline"
-                >
-                  {repo.name} ↗
-                </a>
-              </td>
-              <td className="font-mono text-xs">{repo.language}</td>
-              <td className="text-xs">
-                <div className="text-gray-900 mb-1">{repo.description}</div>
-                <div className="flex flex-wrap gap-1">
-                  {repo.topics.map((t) => (
-                    <span key={t} className="bg-white border border-[#c8ccd1] text-[10.5px] px-1 py-0.2 rounded font-mono text-gray-700">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </td>
-              <td className="font-mono text-xs">
-                <a
-                  href={repo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#0645ad] hover:underline whitespace-nowrap"
-                >
-                  [GitHub ↗]
-                </a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
 
-      {/* Programming Languages & Tooling (Wikipedia Style with Language as Subject) */}
-      <div className="mt-4 pt-1">
+      <ul className="space-y-4 list-disc pl-5 text-[#202122] mb-5">
+        {codeData.curatedRepositories.map((repo) => (
+          <li key={repo.name} className="leading-relaxed pl-1">
+            <div>
+              <a
+                href={repo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold font-mono text-[#0645ad] hover:underline text-[14.5px]"
+              >
+                {repo.name} ↗
+              </a>
+              <span className="text-xs text-gray-500 font-mono ml-2">
+                ({repo.language})
+              </span>
+            </div>
+
+            <p className="text-xs sm:text-[13px] text-gray-800 mt-0.5 mb-1.5 leading-relaxed">
+              {repo.description}
+            </p>
+
+            <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-gray-600">
+              <span className="text-gray-400">Topics:</span>
+              {repo.topics.map((t) => (
+                <span
+                  key={t}
+                  className="bg-[#f8f9fa] border border-[#d1d5db] text-gray-700 px-1.5 py-0.2 rounded-xs"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      {/* Programming Languages & Tooling (Wikipedia Style) */}
+      <div className="mt-4 pt-3 border-t border-[#eaecf0]">
         <h3 className="text-xs font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
           Programming Languages & Tooling
         </h3>
