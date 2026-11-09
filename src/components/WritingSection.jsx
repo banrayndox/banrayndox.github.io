@@ -1,27 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import SectionHeading from './SectionHeading.jsx';
-import { articlesData } from '../data/articles.js';
+// import { articlesData } from '../data/articles.js';
 
 /**
  * Writing & Knowledge Section
- * Formatted as an authentic Wikipedia bibliography / publications archive list
- * instead of a grid table.
+ * Currently displaying an honest note as no formal write-ups have been published yet.
+ * The article list template is preserved and commented out for quick future additions.
  */
 export default function WritingSection() {
   return (
     <section>
       <SectionHeading id="writing" title="Writing & technical notes" subtitle="Publications & articles" />
 
-      <p className="text-xs text-[#54595d] italic mb-4">
-        A curated archive of technical notes, architectural teardowns, and algorithmic tutorials. Each entry links to its dedicated reader page.
-      </p>
+      {/* Honest statement that no articles have been published yet */}
+      <div className="p-3.5 bg-[#f8f9fa] border border-[#eaecf0] text-xs sm:text-[13.5px] text-gray-700 leading-relaxed rounded-xs">
+        <p className="m-0 italic">
+          Currently, Rakib Biswash has not published any formal technical articles, tutorials, or research write-ups. Technical notes, architectural teardowns, and engineering observations will be archived here as they are published.
+        </p>
+      </div>
 
-      {/* Wikipedia Style Bibliography / Article Archive List */}
-      <ul className="space-y-5 list-disc pl-5 text-[#202122]">
+      {/*
+        ========================================================================
+        FUTURE WRITING ARCHIVE TEMPLATE (COMMENTED OUT FOR QUICK FUTURE ADDITION)
+        When articles or write-ups are ready:
+        1. Add the article object to src/data/articles.js
+        2. Uncomment the archive block below.
+        ========================================================================
+      */}
+      {/*
+      <ul className="space-y-5 list-disc pl-5 text-[#202122] mt-4">
         {articlesData.map((article) => (
           <li key={article.slug} className="leading-relaxed pl-1">
-            {/* Header: Title, Date, Category */}
             <div>
               <Link
                 to={`/articles/${article.slug}`}
@@ -34,12 +44,10 @@ export default function WritingSection() {
               </span>
             </div>
 
-            {/* Summary / Abstract */}
             <p className="text-[13.5px] text-gray-800 mt-1 mb-1.5 leading-relaxed">
               {article.summary}
             </p>
 
-            {/* Direct Action Link */}
             <div className="text-xs font-mono">
               <Link
                 to={`/articles/${article.slug}`}
@@ -51,6 +59,7 @@ export default function WritingSection() {
           </li>
         ))}
       </ul>
+      */}
     </section>
   );
 }
