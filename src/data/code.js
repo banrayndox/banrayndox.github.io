@@ -38,15 +38,6 @@ export const codeData = {
       topics: ["mern-stack", "react", "express", "mongodb"]
     },
     {
-      name: "codeready-ai",
-      description: "Repository intelligence tool analyzing AST dependencies and generating architectural walkthroughs.",
-      language: "JavaScript",
-      stars: 0,
-      forks: 0,
-      url: "https://github.com/banrayndox/codeready-ai",
-      topics: ["ai", "ast", "langgraph", "groq"]
-    },
-    {
       name: "c-backend-server",
       description: "Lightweight POSIX socket HTTP/1.1 server implemented in C using POSIX threads.",
       language: "C",

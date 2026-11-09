@@ -25,8 +25,8 @@ export const contactData = {
     },
     {
       label: "Facebook",
-      value: "facebook.com/banrayndox",
-      url: "https://facebook.com/banrayndox",
+      value: "facebook.com/profile.php?id=61588270839184",
+      url: "https://www.facebook.com/profile.php?id=61588270839184",
       hint: "Social profile & community connections"
     },
     {
