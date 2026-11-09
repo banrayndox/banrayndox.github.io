@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import HomePage from './pages/HomePage.jsx';
@@ -7,12 +7,13 @@ import ArticleDetailPage from './pages/ArticleDetailPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 
 /**
- * 100% Full Static Personal Engineer's Wiki
- * Uses HashRouter for universal zero-configuration static hosting (GitHub Pages, Netlify, Vercel, file://).
+ * 100% Static-Ready Personal Engineer's Wiki
+ * Uses BrowserRouter for clean in-page hash anchors (#academic, #projects, #contact)
+ * and seamless smooth-scrolling navigation.
  */
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="min-h-screen bg-white text-[#202122] flex flex-col font-sans selection:bg-[#c8ccd1] selection:text-black">
         <Navbar />
         
@@ -28,6 +29,6 @@ export default function App() {
           <Footer />
         </div>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

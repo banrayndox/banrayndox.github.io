@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { profileData } from '../data/profile.js';
+import { scrollToTarget } from '../utils/scrollToSection.js';
 
 export default function WikiInfobox() {
   const [imgSrc, setImgSrc] = useState(profileData.avatar.customPhotoUrl);
   const [imgFailed, setImgFailed] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleImageError = () => {
     if (!imgFailed) {
       setImgFailed(true);
       setImgSrc('/rakib-placeholder.svg');
     }
+  };
+
+  const handleLinkClick = (e, targetId) => {
+    e.preventDefault();
+    scrollToTarget(targetId, navigate, location.pathname);
   };
 
   return (
@@ -62,7 +71,13 @@ export default function WikiInfobox() {
               Alma mater
             </th>
             <td className="text-xs text-gray-900">
-              <a href="#academic" className="hover:underline">Daffodil International University</a> (DIU)
+              <a
+                href="#academic"
+                onClick={(e) => handleLinkClick(e, 'academic')}
+                className="hover:underline cursor-pointer"
+              >
+                Daffodil International University
+              </a> (DIU)
             </td>
           </tr>
           <tr className="border-b border-[#eaecf0]">
@@ -94,9 +109,33 @@ export default function WikiInfobox() {
             </th>
             <td className="text-xs text-gray-900">
               <ul className="list-disc pl-4 space-y-0.5 m-0">
-                <li><a href="#diu-copilot">DIU Copilot</a></li>
-                <li><a href="#codeready-ai">CodeReady AI</a></li>
-                <li><a href="#diu-class-coordination-system">DIU Class Coordination</a></li>
+                <li>
+                  <a
+                    href="#diu-copilot"
+                    onClick={(e) => handleLinkClick(e, 'diu-copilot')}
+                    className="cursor-pointer hover:underline"
+                  >
+                    DIU Copilot
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#codeready-ai"
+                    onClick={(e) => handleLinkClick(e, 'codeready-ai')}
+                    className="cursor-pointer hover:underline"
+                  >
+                    CodeReady AI
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#diu-class-coordination-system"
+                    onClick={(e) => handleLinkClick(e, 'diu-class-coordination-system')}
+                    className="cursor-pointer hover:underline"
+                  >
+                    DIU Class Coordination
+                  </a>
+                </li>
               </ul>
             </td>
           </tr>
@@ -137,7 +176,7 @@ export default function WikiInfobox() {
             </th>
             <td className="text-xs">
               <a href="https://github.com/banrayndox" target="_blank" rel="noopener noreferrer">
-                banrayndox
+                banrayndox ↗
               </a>
             </td>
           </tr>
@@ -147,7 +186,7 @@ export default function WikiInfobox() {
             </th>
             <td className="text-xs">
               <a href="https://linkedin.com/in/banrayndox" target="_blank" rel="noopener noreferrer">
-                banrayndox
+                banrayndox ↗
               </a>
             </td>
           </tr>
@@ -157,7 +196,7 @@ export default function WikiInfobox() {
             </th>
             <td className="text-xs">
               <a href="https://codeforces.com/profile/banrayndox" target="_blank" rel="noopener noreferrer">
-                banrayndox
+                banrayndox ↗
               </a>
             </td>
           </tr>

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Introduction from '../components/Introduction.jsx';
 import AcademicSection from '../components/AcademicSection.jsx';
 import ProfessionalSection from '../components/ProfessionalSection.jsx';
@@ -12,6 +13,20 @@ import ContactSection from '../components/ContactSection.jsx';
 import ReferencesSection from '../components/ReferencesSection.jsx';
 
 export default function HomePage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="space-y-6">
       <Introduction />
