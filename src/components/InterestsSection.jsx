@@ -3,7 +3,7 @@ import SectionHeading from './SectionHeading.jsx';
 
 /**
  * Research & Technical Interests Section
- * Honestly delineating active technical work from prospective core research aspirations.
+ * Concise Wikipedia-style overview of active engineering focus and research aspirations.
  */
 export default function InterestsSection() {
   return (
@@ -11,46 +11,28 @@ export default function InterestsSection() {
       <SectionHeading
         id="research"
         title="Research & technical interests"
-        subtitle="Active work & academic aspirations"
+        subtitle="Focus areas & academic interests"
       />
 
-      <div className="space-y-3 text-[14.5px] text-[#202122] leading-relaxed mb-4">
-        <p>
-          Rakib B is currently actively engaged in three primary technical disciplines: <strong>Software Engineering</strong>, <strong>AI Engineering</strong>, and <strong>Competitive Programming</strong>.
-        </p>
+      <p className="text-[14.5px] text-[#202122] leading-relaxed mb-3">
+        Rakib B's technical work and academic interests center on three primary domains:
+      </p>
 
-        <p>
-          He has not formally initiated institutional or academic core research yet; however, his long-term core research aspiration centers on <strong>algorithms and theoretical computer science</strong> — with an academic intent to explore algorithmic optimization, combinatorial problem solving, and asymptotic complexity bounds.
-        </p>
-      </div>
-
-      {/* Active Work */}
-      <h3 className="text-xs font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
-        Active Technical Focus
-      </h3>
-
-      <ul className="list-disc pl-5 space-y-2 text-xs sm:text-[13.5px] text-[#202122] leading-relaxed mb-4">
+      <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13.5px] text-[#202122] leading-relaxed mb-3.5">
         <li>
-          <strong>Software Engineering (Active):</strong> Architecting full-stack web platforms, designing modular backend services, developing RESTful APIs, and modeling database structures prioritizing reliability and clean code maintainability.
+          <strong>Software Engineering</strong> — Full-stack web systems, modular backend architecture, and clean RESTful APIs.
         </li>
         <li>
-          <strong>AI Engineering (Active):</strong> Developing practical LLM applications, orchestrating stateful cyclic agents with LangGraph, implementing Retrieval-Augmented Generation (RAG) systems, and embedding documents with ChromaDB.
+          <strong>AI Engineering</strong> — Applied LLM workflows, agent orchestration with LangGraph, and RAG architectures.
         </li>
         <li>
-          <strong>Competitive Programming (Active):</strong> Practicing algorithmic problem-solving under timed contest conditions, two-pointer invariants, dynamic programming, and complexity optimization on platforms like Codeforces and LeetCode.
+          <strong>Competitive Programming</strong> — Algorithmic problem solving, graph theory, and computational complexity on Codeforces and LeetCode.
         </li>
       </ul>
 
-      {/* Future Research Aspiration */}
-      <h3 className="text-xs font-bold text-gray-900 mb-2 font-sans uppercase tracking-wider">
-        Future Research Aspiration
-      </h3>
-
-      <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13.5px] text-[#202122] leading-relaxed">
-        <li>
-          <strong>Algorithms & Theoretical Computer Science (Prospective):</strong> While formal research has not started yet, his primary academic aspiration is to investigate algorithmic optimization, graph algorithms, and optimal data structure representations.
-        </li>
-      </ul>
+      <p className="text-xs sm:text-[13px] text-gray-700 leading-relaxed italic border-l-2 border-[#a2a9b1] pl-3 py-1 bg-[#f8f9fa]">
+        Formal institutional research has not commenced yet; his long-term core research aspiration centers on <strong>algorithms and theoretical computer science</strong>, with an emphasis on optimization and computational complexity bounds.
+      </p>
     </section>
   );
 }
