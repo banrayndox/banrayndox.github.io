@@ -32,12 +32,8 @@ export default function Introduction() {
         {/* Right-aligned Wikipedia Biographical Infobox */}
         <WikiInfobox />
 
-        {/* Lead Encyclopedic Paragraphs */}
+        {/* Lead Bio Paragraphs */}
         <div className="space-y-3 text-[14.5px] leading-relaxed text-[#202122]">
-          <p>
-            <strong>{profileData.name}</strong> is a Computer Science and Engineering undergraduate student, full-stack developer, and competitive programmer based in Dhaka, Bangladesh.
-          </p>
-
           {profileData.bioParagraphs.map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
