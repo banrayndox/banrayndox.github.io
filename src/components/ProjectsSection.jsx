@@ -63,7 +63,7 @@ export default function ProjectsSection() {
                     rel="noopener noreferrer"
                     className="text-[#0645ad] hover:underline font-bold"
                   >
-                    [Source Code ↗]
+                    [Source Code]
                   </a>
                 )}
                 {project.hasLiveDemo && project.liveUrl && (
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
                     rel="noopener noreferrer"
                     className="text-[#0645ad] hover:underline font-bold"
                   >
-                    [Live Deployment ↗]
+                    [Live Deployment]
                   </a>
                 )}
               </div>

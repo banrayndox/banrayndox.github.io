@@ -53,7 +53,7 @@ export default function WritingSection() {
                 to={`/articles/${article.slug}`}
                 className="text-[#0645ad] hover:underline"
               >
-                [Read Full Article ↗]
+                [Read Full Article]
               </Link>
             </div>
           </li>

@@ -17,9 +17,9 @@ export default function CodeSection() {
           href={codeData.githubProfileUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0645ad] hover:underline font-mono font-bold"
+          className="text-[#0645ad] hover:underline font-mono"
         >
-          @{codeData.githubUsername} ↗
+          @{codeData.githubUsername}
         </a>.
         His codebase is structured around modularity, low overhead, and clear architecture.
       </p>
@@ -39,7 +39,7 @@ export default function CodeSection() {
                 rel="noopener noreferrer"
                 className="font-bold font-mono text-[#0645ad] hover:underline text-[14.5px]"
               >
-                {repo.name} ↗
+                {repo.name}
               </a>
               <span className="text-xs text-gray-500 font-mono ml-2">
                 ({repo.language})

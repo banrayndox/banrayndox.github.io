@@ -51,36 +51,43 @@ export default function CompetitiveProgrammingSection() {
         </tbody>
       </table>
 
-      {/* Online Profiles & Handles (Prose Paragraph Format) */}
-      <p className="text-xs sm:text-[13.5px] text-[#202122] leading-relaxed mt-4">
+      {/* Online Profiles & Handles (Wikipedia Prose Format) */}
+      <p className="text-[14px] text-[#202122] leading-relaxed mt-4">
         For online contest practice and algorithmic problem solving, Rakib B actively competes on{" "}
         <a
           href="https://codeforces.com/profile/banrayndox"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0645ad] hover:underline font-medium"
+          className="text-[#0645ad] hover:underline"
         >
-          Codeforces ↗
+          Codeforces
         </a>{" "}
         and solves data structures and dynamic programming challenges on{" "}
         <a
           href="https://leetcode.com/u/banrayndox/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0645ad] hover:underline font-medium"
+          className="text-[#0645ad] hover:underline"
         >
-          LeetCode ↗
+          LeetCode
         </a>. Algorithmic contest templates and categorized C++ solutions are publicly maintained on{" "}
         <a
           href="https://github.com/banrayndox"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0645ad] hover:underline font-medium"
+          className="text-[#0645ad] hover:underline"
         >
-          GitHub ↗
+          GitHub
         </a>{" "}
         under the handle{" "}
-        <span className="font-mono text-gray-900 font-semibold">@banrayndox</span>.
+        <a
+          href="https://github.com/banrayndox"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0645ad] hover:underline font-mono font-medium"
+        >
+          banrayndox
+        </a>.
       </p>
     </section>
   );
