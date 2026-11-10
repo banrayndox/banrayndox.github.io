@@ -6,10 +6,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-12 pt-6 pb-12 border-t border-[#a2a9b1] text-xs text-[#54595d] font-sans">
-      <div className="flex flex-col sm:flex-row items-baseline justify-between gap-3 mb-2">
+    <footer className="mt-12 pt-5 pb-12 border-t border-[#a2a9b1] text-xs text-[#54595d] font-sans">
+      <div className="flex items-center justify-between gap-3">
         <p className="m-0 leading-relaxed">
-          This article was last updated in November 2026. Maintained statically as an engineer's personal knowledge archive and academic record.
+          This page was last edited in November 2026.
         </p>
         <button
           onClick={scrollToTop}
@@ -20,14 +20,8 @@ export default function Footer() {
         </button>
       </div>
 
-      <div className="text-[11.5px] text-gray-500 flex flex-wrap items-center gap-x-3 gap-y-1 pt-2 border-t border-[#eaecf0]">
+      <div className="text-[11.5px] text-gray-500 pt-2 mt-2 border-t border-[#eaecf0]">
         <span>© 2026 Rakib B</span>
-        <span>·</span>
-        <span>Built with curiosity, code, and static precision</span>
-        <span>·</span>
-        <a href="#about" className="text-[#0645ad] hover:underline">About this wiki</a>
-        <span>·</span>
-        <a href="#contact" className="text-[#0645ad] hover:underline">Contact</a>
       </div>
     </footer>
   );
