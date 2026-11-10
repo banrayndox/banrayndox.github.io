@@ -51,28 +51,37 @@ export default function CompetitiveProgrammingSection() {
         </tbody>
       </table>
 
-      {/* Online Profiles & Handles (Wiki Bulleted List instead of second table) */}
-      <div className="mt-4 pt-1">
-        <h3 className="text-sm font-bold text-gray-900 mb-2">
-          Online Evaluator Profiles & Handles
-        </h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13.5px] text-[#202122]">
-          {competitiveProgrammingData.profiles.map((p, idx) => (
-            <li key={idx} className="leading-relaxed">
-              <strong>{p.platform}:</strong>{" "}
-              <a
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0645ad] hover:underline font-mono font-medium"
-              >
-                @{p.handle} ↗
-              </a>{" "}
-              <span className="text-gray-600">— {p.description}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Online Profiles & Handles (Prose Paragraph Format) */}
+      <p className="text-xs sm:text-[13.5px] text-[#202122] leading-relaxed mt-4">
+        For online contest practice and algorithmic problem solving, Rakib B actively competes on{" "}
+        <a
+          href="https://codeforces.com/profile/banrayndox"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0645ad] hover:underline font-medium"
+        >
+          Codeforces ↗
+        </a>{" "}
+        and solves data structures and dynamic programming challenges on{" "}
+        <a
+          href="https://leetcode.com/u/banrayndox/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0645ad] hover:underline font-medium"
+        >
+          LeetCode ↗
+        </a>. Algorithmic contest templates and categorized C++ solutions are publicly maintained on{" "}
+        <a
+          href="https://github.com/banrayndox"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0645ad] hover:underline font-medium"
+        >
+          GitHub ↗
+        </a>{" "}
+        under the handle{" "}
+        <span className="font-mono text-gray-900 font-semibold">@banrayndox</span>.
+      </p>
     </section>
   );
 }
