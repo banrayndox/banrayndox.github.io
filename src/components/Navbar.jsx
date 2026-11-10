@@ -39,8 +39,6 @@ export default function Navbar() {
             </span>
             <span>Rakib's Wiki</span>
           </Link>
-          <span className="text-gray-300 hidden sm:inline">|</span>
-          <span className="italic hidden sm:inline">The Engineer's Knowledge Base</span>
         </div>
 
         {/* Wikipedia Header Action Tabs */}
