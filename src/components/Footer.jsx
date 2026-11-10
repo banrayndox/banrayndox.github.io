@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="mt-12 pt-4 pb-12 text-xs text-[#54595d] font-sans">
       <div className="flex items-center justify-between gap-3">
-        <span>© 2026 Rakib B</span>
+        <span>Last update: November 2026</span>
         <button
           onClick={scrollToTop}
           type="button"
