@@ -27,7 +27,17 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-xs border-b border-[#a2a9b1] shadow-2xs">
       {/* Top Wikipedia Skin Meta Bar */}
-      <div className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-2 pb-1.5 flex items-center justify-end text-xs text-[#54595d] border-b border-[#eaecf0]">
+      <div className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-2 pb-1.5 flex items-center justify-between text-xs text-[#54595d] border-b border-[#eaecf0]">
+        <div>
+          <button
+            type="button"
+            onClick={(e) => handleNavClick(e, 'about')}
+            className="text-black hover:no-underline font-serif font-bold text-sm cursor-pointer bg-transparent border-0 p-0"
+          >
+            Rakib's Wiki
+          </button>
+        </div>
+
         {/* Wikipedia Header Action Tabs */}
         <div className="flex items-center gap-3 font-sans">
           <button
