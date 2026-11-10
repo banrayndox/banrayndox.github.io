@@ -8,51 +8,24 @@ export default function CompetitiveProgrammingSection() {
       <SectionHeading
         id="competitive-programming"
         title="Competitive programming & hackathons"
-        subtitle="Contests, hackathons & algorithmic problem solving"
+        subtitle="Contests & honours"
       />
 
-      <blockquote className="border-l-3 border-[#a2a9b1] pl-3 py-1 mb-4 text-xs sm:text-sm italic text-gray-800 bg-[#f8f9fa]">
-        "{competitiveProgrammingData.quote}"
-      </blockquote>
+      {/* Contest Standings & Hackathon Honours (Article / Wikipedia List Format) */}
+      <ul className="space-y-3.5 list-disc pl-5 text-[14px] text-[#202122] leading-relaxed mb-4">
+        {competitiveProgrammingData.achievements.map((item, idx) => (
+          <li key={idx} className="pl-1">
+            <span className="font-semibold text-gray-950">{item.award}</span> —{" "}
+            <strong>{item.contest}</strong> ({item.edition}), organized by {item.organizer}.
+            <p className="text-xs sm:text-[13px] text-gray-700 mt-0.5 mb-0 leading-relaxed">
+              {item.details}
+            </p>
+          </li>
+        ))}
+      </ul>
 
-      <p className="text-[14px] text-[#202122] leading-relaxed mb-4">
-        {competitiveProgrammingData.overview}
-      </p>
-
-      {/* Contest & Hackathon Standings Table */}
-      <h3 className="text-sm font-bold text-gray-900 mb-2">
-        Contest Standings & Hackathon Honours
-      </h3>
-      <table className="wikitable mb-5">
-        <thead>
-          <tr>
-            <th className="w-2/5">Competition / Event</th>
-            <th className="w-1/6">Edition</th>
-            <th className="w-1/4">Award / Standing</th>
-            <th>Organizer</th>
-          </tr>
-        </thead>
-        <tbody>
-          {competitiveProgrammingData.achievements.map((item, idx) => (
-            <tr key={idx}>
-              <td>
-                <span className="font-bold block text-xs sm:text-[13.5px]">{item.contest}</span>
-                <span className="text-[11.5px] text-gray-600 block mt-0.5 leading-snug">
-                  {item.details}
-                </span>
-              </td>
-              <td className="font-mono text-xs whitespace-nowrap">{item.edition}</td>
-              <td className="text-xs font-semibold whitespace-nowrap">
-                {item.award}
-              </td>
-              <td className="text-xs text-gray-700">{item.organizer}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {/* Online Profiles & Handles (Wikipedia Prose Format) */}
-      <p className="text-[14px] text-[#202122] leading-relaxed mt-4">
+      {/* Online Profiles & Practice (Wikipedia Prose Format) */}
+      <p className="text-[14px] text-[#202122] leading-relaxed pt-2 border-t border-[#eaecf0]">
         For online contest practice and algorithmic problem solving, Rakib B actively competes on{" "}
         <a
           href="https://codeforces.com/profile/banrayndox"
