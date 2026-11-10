@@ -15,14 +15,11 @@ export default function Introduction() {
   };
   return (
     <section id="about" className="pt-3 pb-4">
-      {/* Wikipedia Page Title & Tagline */}
+      {/* Wikipedia Page Title */}
       <div className="mb-3">
-        <h1 className="text-2xl sm:text-3xl md:text-[32px] font-serif font-normal text-black border-b border-[#a2a9b1] pb-1 mb-1 tracking-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-[32px] font-serif font-normal text-black border-b border-[#a2a9b1] pb-1 tracking-tight">
           {profileData.name}
         </h1>
-        <div className="text-xs text-[#54595d] italic">
-          From Rakib's Knowledge Base, the personal engineer's wiki
-        </div>
       </div>
 
       {/* Wikipedia Hatnote */}
