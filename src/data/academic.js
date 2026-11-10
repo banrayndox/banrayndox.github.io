@@ -8,7 +8,7 @@ export const academicData = {
   departmentUrl: "https://daffodilvarsity.edu.bd/department/cse",
   degree: "Bachelor of Science in Computer Science and Engineering",
   degreeShort: "B.Sc. in CSE",
-  currentStatus: "5th Semester",
+  currentStatus: "6th Semester",
   location: "Dhaka, Bangladesh",
   
   overview: 

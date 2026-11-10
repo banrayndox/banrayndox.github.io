@@ -28,7 +28,7 @@ export default function CompetitiveProgrammingSection() {
       <p className="text-[14px] text-[#202122] leading-relaxed pt-2 border-t border-[#eaecf0]">
         For online contest practice and algorithmic problem solving, Rakib B actively competes on{" "}
         <a
-          href="https://codeforces.com/profile/banrayndox"
+          href="https://codeforces.com/profile/airayndox"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#0645ad] hover:underline"
@@ -51,15 +51,6 @@ export default function CompetitiveProgrammingSection() {
           className="text-[#0645ad] hover:underline"
         >
           GitHub
-        </a>{" "}
-        under the handle{" "}
-        <a
-          href="https://github.com/banrayndox"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#0645ad] hover:underline font-mono font-medium"
-        >
-          banrayndox
         </a>.
       </p>
     </section>

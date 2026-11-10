@@ -78,7 +78,7 @@ export default function WikiInfobox() {
 
           <tr className="border-b border-[#eaecf0]">
             <th scope="row" className="text-xs font-bold text-gray-800">
-              Alma mater
+              Institute
             </th>
             <td className="text-xs text-gray-900">
               <a
@@ -91,7 +91,7 @@ export default function WikiInfobox() {
               </a>{" "}
               <span className="text-gray-500">(DIU)</span>
               <div className="text-[11px] text-gray-600 mt-0.5">
-                B.Sc. in CSE · 5th Semester
+                B.Sc. in CSE · 6th Semester
               </div>
             </td>
           </tr>
@@ -101,7 +101,7 @@ export default function WikiInfobox() {
               Occupation
             </th>
             <td className="text-xs text-gray-900">
-              Software developer · Student
+              Student
             </td>
           </tr>
 

@@ -8,7 +8,7 @@ export const contactData = {
   profiles: [
     { name: "GitHub", url: "https://github.com/banrayndox" },
     { name: "LinkedIn", url: "https://linkedin.com/in/banrayndox" },
-    { name: "Codeforces", url: "https://codeforces.com/profile/banrayndox" },
+    { name: "Codeforces", url: "https://codeforces.com/profile/airayndox" },
     { name: "LeetCode", url: "https://leetcode.com/u/banrayndox/" },
     { name: "YouTube", url: "https://youtube.com/@banrayndox" },
     { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61588270839184" },

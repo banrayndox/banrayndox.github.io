@@ -34,9 +34,21 @@ export default function Introduction() {
 
         {/* Lead Bio Paragraphs */}
         <div className="space-y-3 text-[14.5px] leading-relaxed text-[#202122]">
-          {profileData.bioParagraphs.map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
-          ))}
+          <p>
+            Hi, I'm Rakib — a CSE student at{" "}
+            <a
+              href="https://daffodilvarsity.edu.bd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0645ad] hover:underline"
+            >
+              Daffodil International University
+            </a>{" "}
+            with a strong passion for competitive programming and algorithmic problem solving.
+          </p>
+          <p>
+            I actively compete in programming contests while engineering full-stack software systems and exploring applied AI applications.
+          </p>
         </div>
 
         {/* Wikipedia Table of Contents */}

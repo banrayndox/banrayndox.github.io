@@ -39,8 +39,8 @@ export const competitiveProgrammingData = {
   profiles: [
     {
       platform: "Codeforces",
-      handle: "banrayndox",
-      url: "https://codeforces.com/profile/banrayndox",
+      handle: "airayndox",
+      url: "https://codeforces.com/profile/airayndox",
       description: "Regular contest participation in Div. 2 / Div. 3 rounds."
     },
     {

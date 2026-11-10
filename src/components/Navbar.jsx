@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { scrollToTarget } from '../utils/scrollToSection.js';
 
 export default function Navbar() {
@@ -27,20 +27,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-xs border-b border-[#a2a9b1] shadow-2xs">
       {/* Top Wikipedia Skin Meta Bar */}
-      <div className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-2 pb-1.5 flex items-center justify-between text-xs text-[#54595d] border-b border-[#eaecf0]">
-        <div className="flex items-center gap-3">
-          <Link
-            to="/"
-            onClick={(e) => handleNavClick(e, 'about')}
-            className="flex items-center gap-1.5 text-black hover:no-underline font-serif font-bold text-sm cursor-pointer"
-          >
-            <span className="w-5 h-5 bg-[#202122] text-white flex items-center justify-center font-bold text-xs rounded-xs">
-              W
-            </span>
-            <span>Rakib's Wiki</span>
-          </Link>
-        </div>
-
+      <div className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-2 pb-1.5 flex items-center justify-end text-xs text-[#54595d] border-b border-[#eaecf0]">
         {/* Wikipedia Header Action Tabs */}
         <div className="flex items-center gap-3 font-sans">
           <button

@@ -29,7 +29,7 @@ export const profileData = {
   quickLinks: [
     { label: "GitHub", url: "https://github.com/banrayndox" },
     { label: "LinkedIn", url: "https://linkedin.com/in/banrayndox" },
-    { label: "Codeforces", url: "https://codeforces.com/profile/banrayndox" },
+    { label: "Codeforces", url: "https://codeforces.com/profile/airayndox" },
     { label: "LeetCode", url: "https://leetcode.com/u/banrayndox/" },
     { label: "Email", url: "mailto:banrayndox@gmail.com" },
     { label: "Resume", url: "#resume", note: "Available upon request / direct download" },
