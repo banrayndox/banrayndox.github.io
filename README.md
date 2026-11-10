@@ -1,6 +1,6 @@
-# Rakib Biswash — Personal Website & Engineer's Wiki
+# Rakib B — Personal Website & Engineer's Wiki
 
-A minimalist, content-first personal website and academic knowledge archive for **Rakib Biswash**, inspired by the aesthetic and architectural philosophy of [William Falcon's homepage](https://www.williamfalcon.com/).
+A minimalist, content-first personal website and academic knowledge archive for **Rakib B**, inspired by the aesthetic and architectural philosophy of [William Falcon's homepage](https://www.williamfalcon.com/).
 
 This project deliberately avoids conventional developer portfolio gimmicks (no oversized hero banners, no 3D decorations, no skill percentage bars, no glassmorphism). Instead, it presents an authentic synthesis of:
 - **A personal Wikipedia page** (structured biographical and academic facts).

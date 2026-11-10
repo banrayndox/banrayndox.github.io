@@ -16,7 +16,7 @@ export default function WritingSection() {
       {/* Honest statement that no articles have been published yet */}
       <div className="p-3.5 bg-[#f8f9fa] border border-[#eaecf0] text-xs sm:text-[13.5px] text-gray-700 leading-relaxed rounded-xs">
         <p className="m-0 italic">
-          Currently, Rakib Biswash has not published any formal technical articles, tutorials, or research write-ups. Technical notes, architectural teardowns, and engineering observations will be archived here as they are published.
+          Currently, Rakib B has not published any formal technical articles, tutorials, or research write-ups. Technical notes, architectural teardowns, and engineering observations will be archived here as they are published.
         </p>
       </div>
 

@@ -62,7 +62,7 @@ export default function ArticleDetailPage() {
           </tr>
           <tr>
             <th className="text-xs">Author</th>
-            <td className="text-xs">Rakib Biswash (Daffodil International University)</td>
+            <td className="text-xs">Rakib B (Daffodil International University)</td>
           </tr>
           <tr>
             <th className="text-xs">Publication / Revision</th>
@@ -196,7 +196,7 @@ export default function ArticleDetailPage() {
       {/* Return button */}
       <div className="mt-8 pt-4 border-t border-[#eaecf0]">
         <Link to="/" className="text-xs text-[#0645ad] hover:underline font-mono">
-          ← Return to Rakib Biswash (Main Wiki Article)
+          ← Return to Rakib B (Main Wiki Article)
         </Link>
       </div>
     </article>

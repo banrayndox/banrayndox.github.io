@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       <SectionHeading id="projects" title="Selected projects" subtitle="Technical systems & software" />
 
       <p className="text-[14.5px] text-[#202122] leading-relaxed mb-5">
-        Rakib Biswash has developed and contributed to several software systems, ranging from full-stack university coordination tools and retrieval-augmented generation (RAG) campus assistants to low-level POSIX socket servers.
+        Rakib B has developed and contributed to several software systems, ranging from full-stack university coordination tools and retrieval-augmented generation (RAG) campus assistants to low-level POSIX socket servers.
       </p>
 
       <div className="space-y-6">

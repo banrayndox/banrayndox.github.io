@@ -14,7 +14,7 @@ export default function AcademicSection() {
 
       <div className="space-y-3 text-[#202122] text-[14.5px] leading-relaxed">
         <p>
-          Rakib Biswash is an undergraduate student in{" "}
+          Rakib B is an undergraduate student in{" "}
           <a
             href={academicData.departmentUrl}
             target="_blank"

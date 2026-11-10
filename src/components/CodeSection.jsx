@@ -12,7 +12,7 @@ export default function CodeSection() {
       <SectionHeading id="code" title="Code & open source" subtitle="Repositories & implementations" />
 
       <p className="text-[14.5px] text-[#202122] leading-relaxed mb-4">
-        Rakib Biswash maintains public software repositories, systems implementations, and algorithmic problem-solving archives under the GitHub handle{" "}
+        Rakib B maintains public software repositories, systems implementations, and algorithmic problem-solving archives under the GitHub handle{" "}
         <a
           href={codeData.githubProfileUrl}
           target="_blank"

@@ -16,7 +16,7 @@ export default function InterestsSection() {
 
       <div className="space-y-3 text-[14.5px] text-[#202122] leading-relaxed mb-4">
         <p>
-          Rakib Biswash is currently actively engaged in three primary technical disciplines: <strong>Software Engineering</strong>, <strong>AI Engineering</strong>, and <strong>Competitive Programming</strong>.
+          Rakib B is currently actively engaged in three primary technical disciplines: <strong>Software Engineering</strong>, <strong>AI Engineering</strong>, and <strong>Competitive Programming</strong>.
         </p>
 
         <p>

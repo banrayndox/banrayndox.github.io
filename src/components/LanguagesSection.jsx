@@ -16,7 +16,7 @@ export default function LanguagesSection() {
       />
 
       <p className="text-[14.5px] text-[#202122] leading-relaxed mb-3.5">
-        Rakib Biswash utilizes several programming languages across competitive programming, full-stack systems engineering, machine learning workflows, and systems-level academic coursework:
+        Rakib B utilizes several programming languages across competitive programming, full-stack systems engineering, machine learning workflows, and systems-level academic coursework:
       </p>
 
       <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-[13px] text-gray-800 leading-relaxed">

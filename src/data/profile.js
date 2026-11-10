@@ -1,24 +1,22 @@
+import rakibPhoto from '../assets/Rakib_B.jpg';
+
 /**
  * Personal Profile & Bio Configuration
  * Easily update your personal details, titles, and bio text here.
  */
 export const profileData = {
-  name: "Rakib Biswash",
+  name: "Rakib B",
   title: "Computer Science & Engineering Student | Software Developer | AI Enthusiast",
   institution: "Daffodil International University",
   location: "Dhaka, Bangladesh",
   resumeUrl: "/resume.pdf",
   
   // Profile Photo configuration:
-  // To use your actual photograph:
-  // 1. Place your photo in the public folder as `rakib.jpg` (or any path)
-  // 2. Set customPhotoUrl: "/rakib.jpg" (or your image URL)
-  // 3. Set usePlaceholder: false
   avatar: {
-    customPhotoUrl: "/rakib.jpg",
+    customPhotoUrl: rakibPhoto,
     placeholderInitial: "RB",
-    altText: "Photograph of Rakib Biswash",
-    caption: "Rakib Biswash — Daffodil International University",
+    altText: "Photograph of Rakib B",
+    caption: "Rakib B — Daffodil International University",
   },
 
   // The 3 core introductory paragraphs as requested

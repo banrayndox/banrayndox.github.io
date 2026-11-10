@@ -21,7 +21,7 @@ export default function Footer() {
       </div>
 
       <div className="text-[11.5px] text-gray-500 flex flex-wrap items-center gap-x-3 gap-y-1 pt-2 border-t border-[#eaecf0]">
-        <span>© 2026 Rakib Biswash</span>
+        <span>© 2026 Rakib B</span>
         <span>·</span>
         <span>Built with curiosity, code, and static precision</span>
         <span>·</span>

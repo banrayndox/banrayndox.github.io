@@ -51,11 +51,11 @@ export default function WikiInfobox() {
                   src={imgSrc}
                   alt={profileData.avatar.altText}
                   onError={handleImageError}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="text-[11px] text-[#54595d] mt-1.5 leading-snug font-sans">
-                Rakib Biswash (2026)
+                Rakib B (2026)
               </div>
             </td>
           </tr>

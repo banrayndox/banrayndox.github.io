@@ -13,7 +13,7 @@ export default function ContactSection() {
       <SectionHeading id="contact" title="Contact & external links" subtitle="Correspondence & web profiles" />
 
       <p className="text-[14.5px] text-[#202122] leading-relaxed mb-3.5">
-        Rakib Biswash may be contacted directly via email at{" "}
+        Rakib B may be contacted directly via email at{" "}
         <a
           href={`mailto:${contactData.email}`}
           className="text-[#0645ad] hover:underline font-mono"
