@@ -13,11 +13,11 @@ export default function ArticleDetailPage() {
   if (!article) {
     return (
       <div className="py-16 text-center">
-        <h1 className="text-2xl font-serif text-black mb-3">404: Article Not Found</h1>
-        <p className="text-gray-600 mb-6 text-sm">
+        <h1 className="text-2xl font-serif text-black dark:text-white mb-3">404: Article Not Found</h1>
+        <p className="text-gray-600 dark:text-[#9aa0a6] mb-6 text-sm">
           The requested encyclopedic note does not exist in this archive.
         </p>
-        <Link to="/" className="text-xs text-[#0645ad] hover:underline">
+        <Link to="/" className="text-xs text-[#0645ad] dark:text-[#6da8ff] hover:underline">
           ← Return to Main Page
         </Link>
       </div>
@@ -31,24 +31,24 @@ export default function ArticleDetailPage() {
   return (
     <article className="pt-2 pb-12 max-w-[880px]">
       {/* Wikipedia Breadcrumbs */}
-      <div className="mb-3 text-xs text-[#54595d]">
-        <Link to="/" className="text-[#0645ad] hover:underline">
+      <div className="mb-3 text-xs text-[#54595d] dark:text-[#9aa0a6]">
+        <Link to="/" className="text-[#0645ad] dark:text-[#6da8ff] hover:underline">
           Main Page
         </Link>
         <span className="mx-1.5">/</span>
-        <a href="#writing" className="text-[#0645ad] hover:underline">
+        <a href="#writing" className="text-[#0645ad] dark:text-[#6da8ff] hover:underline">
           Writing & technical notes
         </a>
         <span className="mx-1.5">/</span>
-        <span className="text-gray-800">{article.title}</span>
+        <span className="text-gray-800 dark:text-[#eaecf0]">{article.title}</span>
       </div>
 
       {/* Wikipedia Article Heading */}
-      <header className="pb-2 mb-4 border-b border-[#a2a9b1]">
-        <h1 className="text-2xl sm:text-3xl font-serif font-normal text-black tracking-tight mb-1">
+      <header className="pb-2 mb-4 border-b border-[#a2a9b1] dark:border-[#54595d]">
+        <h1 className="text-2xl sm:text-3xl font-serif font-normal text-black dark:text-white tracking-tight mb-1">
           {article.title}
         </h1>
-        <div className="text-xs text-[#54595d] italic">
+        <div className="text-xs text-[#54595d] dark:text-[#9aa0a6] italic">
           From Rakib's Knowledge Base, the engineer's personal wiki
         </div>
       </header>
@@ -72,18 +72,18 @@ export default function ArticleDetailPage() {
       </table>
 
       {/* Summary Note */}
-      <div className="p-3 bg-[#f8f9fa] border-l-3 border-[#a2a9b1] text-xs sm:text-[13.5px] italic text-gray-800 mb-5">
-        <strong>Abstract:</strong> {article.summary}
+      <div className="p-3 bg-[#f8f9fa] dark:bg-[#27292d] border-l-3 border-[#a2a9b1] dark:border-[#54595d] text-xs sm:text-[13.5px] italic text-gray-800 dark:text-[#eaecf0] mb-5">
+        <strong className="text-black dark:text-white">Abstract:</strong> {article.summary}
       </div>
 
       {/* Wikipedia Table of Contents */}
       {article.tableOfContents && article.tableOfContents.length > 0 && (
         <aside className="wiki-toc my-4">
           <div className="wiki-toc-title">Contents</div>
-          <ol className="space-y-1 text-xs list-decimal pl-5 text-gray-800">
+          <ol className="space-y-1 text-xs list-decimal pl-5 text-gray-800 dark:text-[#eaecf0]">
             {article.tableOfContents.map((item) => (
               <li key={item.id}>
-                <a href={`#${item.id}`} className="text-[#0645ad] hover:underline">
+                <a href={`#${item.id}`} className="text-[#0645ad] dark:text-[#6da8ff] hover:underline">
                   {item.title}
                 </a>
               </li>
@@ -93,7 +93,7 @@ export default function ArticleDetailPage() {
       )}
 
       {/* Main Body */}
-      <div className="space-y-4 text-gray-900 text-xs sm:text-[14px] leading-relaxed">
+      <div className="space-y-4 text-gray-900 dark:text-[#eaecf0] text-xs sm:text-[14px] leading-relaxed">
         {article.content.split('\n\n').map((paragraph, index) => {
           const trimmed = paragraph.trim();
           if (!trimmed) return null;
@@ -107,7 +107,7 @@ export default function ArticleDetailPage() {
               <h3
                 key={index}
                 id={headingId}
-                className="text-base sm:text-lg font-bold font-serif text-black pt-4 pb-1 border-b border-[#a2a9b1] scroll-mt-20"
+                className="text-base sm:text-lg font-bold font-serif text-black dark:text-white pt-4 pb-1 border-b border-[#a2a9b1] dark:border-[#54595d] scroll-mt-20"
               >
                 {headingText}
               </h3>
@@ -122,11 +122,11 @@ export default function ArticleDetailPage() {
             return (
               <div key={index} className="my-3">
                 {lang && (
-                  <div className="text-[11px] font-mono text-gray-500 uppercase px-2 py-0.5 bg-[#eaecf0] border border-b-0 border-[#a2a9b1]">
+                  <div className="text-[11px] font-mono text-gray-500 dark:text-[#9aa0a6] uppercase px-2 py-0.5 bg-[#eaecf0] dark:bg-[#2e3034] border border-b-0 border-[#a2a9b1] dark:border-[#54595d]">
                     Source ({lang})
                   </div>
                 )}
-                <pre className="m-0 bg-white border border-[#a2a9b1] p-3 text-xs font-mono overflow-x-auto leading-relaxed">
+                <pre className="m-0 bg-white dark:bg-[#27292d] border border-[#a2a9b1] dark:border-[#54595d] p-3 text-xs font-mono overflow-x-auto leading-relaxed">
                   <code>{code}</code>
                 </pre>
               </div>
@@ -138,7 +138,7 @@ export default function ArticleDetailPage() {
             return (
               <blockquote
                 key={index}
-                className="border-l-3 border-[#a2a9b1] pl-3 py-1 italic text-gray-800 bg-[#f8f9fa] my-3 text-xs sm:text-[13.5px]"
+                className="border-l-3 border-[#a2a9b1] dark:border-[#54595d] pl-3 py-1 italic text-gray-800 dark:text-[#c8ccd1] bg-[#f8f9fa] dark:bg-[#27292d] my-3 text-xs sm:text-[13.5px]"
               >
                 {trimmed.replace(/^>\s*/gm, '')}
               </blockquote>
@@ -156,7 +156,7 @@ export default function ArticleDetailPage() {
                 className={`pl-5 space-y-1 my-2.5 ${isNumbered ? 'list-decimal' : 'list-disc'}`}
               >
                 {items.map((item, i) => (
-                  <li key={i} className="text-gray-800 text-xs sm:text-[13.5px]">
+                  <li key={i} className="text-gray-800 dark:text-[#eaecf0] text-xs sm:text-[13.5px]">
                     {item.replace(/^-\s*|^\d+\.\s*/, '')}
                   </li>
                 ))}
@@ -175,18 +175,18 @@ export default function ArticleDetailPage() {
 
       {/* Related Articles */}
       {relatedArticles.length > 0 && (
-        <section className="mt-10 pt-4 border-t border-[#a2a9b1]">
-          <h2 className="text-base font-serif font-bold text-black mb-2">
+        <section className="mt-10 pt-4 border-t border-[#a2a9b1] dark:border-[#54595d]">
+          <h2 className="text-base font-serif font-bold text-black dark:text-white mb-2">
             See also
           </h2>
           <ul className="space-y-1.5 text-xs">
             {relatedArticles.map((rel) => (
               <li key={rel.slug} className="flex items-baseline gap-1.5">
-                <span className="text-gray-400 font-mono">•</span>
-                <Link to={`/articles/${rel.slug}`} className="text-[#0645ad] hover:underline font-medium">
+                <span className="text-gray-400 dark:text-gray-500 font-mono">•</span>
+                <Link to={`/articles/${rel.slug}`} className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-medium">
                   {rel.title}
                 </Link>
-                <span className="text-gray-500 font-mono">({rel.category})</span>
+                <span className="text-gray-500 dark:text-[#9aa0a6] font-mono">({rel.category})</span>
               </li>
             ))}
           </ul>
@@ -194,8 +194,8 @@ export default function ArticleDetailPage() {
       )}
 
       {/* Return button */}
-      <div className="mt-8 pt-4 border-t border-[#eaecf0]">
-        <Link to="/" className="text-xs text-[#0645ad] hover:underline font-mono">
+      <div className="mt-8 pt-4 border-t border-[#eaecf0] dark:border-[#3c4043]">
+        <Link to="/" className="text-xs text-[#0645ad] dark:text-[#6da8ff] hover:underline font-mono">
           ← Return to Rakib B (Main Wiki Article)
         </Link>
       </div>

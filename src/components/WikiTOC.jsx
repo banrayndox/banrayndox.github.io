@@ -68,29 +68,29 @@ export default function WikiTOC() {
 
   return (
     <nav aria-label="Table of contents" className="wiki-toc my-4">
-      <div className="flex items-center justify-between gap-4 border-b border-[#eaecf0] pb-1 mb-2">
-        <span className="font-bold text-xs uppercase tracking-wide text-gray-800">
+      <div className="flex items-center justify-between gap-4 border-b border-[#eaecf0] dark:border-[#3c4043] pb-1 mb-2">
+        <span className="font-bold text-xs uppercase tracking-wide text-gray-800 dark:text-[#eaecf0]">
           Contents
         </span>
         <button
           type="button"
           onClick={() => setCollapsed(!collapsed)}
-          className="text-xs text-[#0645ad] hover:underline cursor-pointer bg-transparent border-0 p-0"
+          className="text-xs text-[#0645ad] dark:text-[#6da8ff] hover:underline cursor-pointer bg-transparent border-0 p-0"
         >
           [{collapsed ? "show" : "hide"}]
         </button>
       </div>
 
       {!collapsed && (
-        <ul className="space-y-1 text-xs text-gray-800 pr-2">
+        <ul className="space-y-1 text-xs text-gray-800 dark:text-[#eaecf0] pr-2">
           {sections.map((sec) => (
             <li key={sec.num}>
               <a
                 href={`#${sec.href}`}
                 onClick={(e) => handleLinkClick(e, sec.href)}
-                className="hover:underline cursor-pointer"
+                className="hover:underline text-[#0645ad] dark:text-[#6da8ff] cursor-pointer"
               >
-                <span className="text-gray-500 font-mono mr-1.5">{sec.num}</span>
+                <span className="text-gray-500 dark:text-[#9aa0a6] font-mono mr-1.5">{sec.num}</span>
                 <span>{sec.title}</span>
               </a>
               {sec.subs && sec.subs.length > 0 && (
@@ -100,9 +100,9 @@ export default function WikiTOC() {
                       <a
                         href={`#${sub.href}`}
                         onClick={(e) => handleLinkClick(e, sub.href)}
-                        className="hover:underline text-gray-700 cursor-pointer"
+                        className="hover:underline text-gray-700 dark:text-[#c8ccd1] hover:text-[#0645ad] dark:hover:text-[#6da8ff] cursor-pointer"
                       >
-                        <span className="text-gray-400 font-mono mr-1">{sub.num}</span>
+                        <span className="text-gray-400 dark:text-[#9aa0a6] font-mono mr-1">{sub.num}</span>
                         <span>{sub.title}</span>
                       </a>
                     </li>

@@ -11,55 +11,12 @@ export default function ProfessionalSection() {
 
       {/* Honest, clean "No activity" text display */}
       {!hasActivities && (
-        <div className="p-3.5 bg-[#f8f9fa] border border-[#eaecf0] text-xs sm:text-[13.5px] text-gray-700 leading-relaxed rounded-xs">
+        <div className="p-3.5 bg-[#f8f9fa] dark:bg-[#27292d] border border-[#eaecf0] dark:border-[#3c4043] text-xs sm:text-[13.5px] text-gray-700 dark:text-[#c8ccd1] leading-relaxed rounded-xs">
           <p className="m-0 italic">
             {noProfessionalActivityMessage}
           </p>
         </div>
       )}
-
-      {/* 
-        ========================================================================
-        FUTURE ACTIVITY TEMPLATE (COMMENTED OUT FOR QUICK ADDITION IN THE FUTURE)
-        When you have professional activities to add:
-        1. Add the item in src/data/professional.js (or uncomment the table below).
-        ========================================================================
-      */}
-      {/*
-      <div className="mt-4">
-        <table className="wikitable mb-4">
-          <thead>
-            <tr>
-              <th className="w-1/4">Period</th>
-              <th className="w-1/3">Role & Organization</th>
-              <th className="w-1/5">Type</th>
-              <th>Location</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="font-mono text-xs">November 2026 – May 2027</td>
-              <td><strong>Software Developer</strong>, <em>Organization Name</em></td>
-              <td className="text-xs text-gray-700">Internship / Role</td>
-              <td className="text-xs">Dhaka, Bangladesh</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div className="pb-3 border-b border-[#eaecf0]">
-          <h3 className="text-sm font-bold text-gray-900 mb-1">
-            Organization Name — Role Title
-          </h3>
-          <p className="text-[14px] text-[#202122] leading-relaxed mb-2">
-            Description of responsibilities and technical accomplishments during this appointment.
-          </p>
-          <ul className="list-disc pl-5 space-y-0.5 text-xs text-gray-700">
-            <li>Achievement or engineering contribution 1</li>
-            <li>Achievement or engineering contribution 2</li>
-          </ul>
-        </div>
-      </div>
-      */}
 
       {/* Dynamic rendering if professionalData is populated */}
       {hasActivities && (
@@ -78,9 +35,9 @@ export default function ProfessionalSection() {
                 <tr key={idx}>
                   <td className="font-mono text-xs">{item.period}</td>
                   <td>
-                    <strong>{item.role}</strong>, <em>{item.organization}</em>
+                    <strong className="text-black dark:text-white">{item.role}</strong>, <em>{item.organization}</em>
                   </td>
-                  <td className="text-xs text-gray-700">{item.type}</td>
+                  <td className="text-xs text-gray-700 dark:text-[#c8ccd1]">{item.type}</td>
                   <td className="text-xs">{item.location}</td>
                 </tr>
               ))}
@@ -89,15 +46,15 @@ export default function ProfessionalSection() {
 
           <div className="space-y-4">
             {professionalData.map((item, idx) => (
-              <div key={idx} className="pb-3 border-b border-[#eaecf0] last:border-b-0">
-                <h3 className="text-sm font-bold text-gray-900 mb-1">
+              <div key={idx} className="pb-3 border-b border-[#eaecf0] dark:border-[#3c4043] last:border-b-0">
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1">
                   {item.organization} — {item.role}
                 </h3>
-                <p className="text-[14px] text-[#202122] leading-relaxed mb-2">
+                <p className="text-[14px] text-[#202122] dark:text-[#eaecf0] leading-relaxed mb-2">
                   {item.description}
                 </p>
                 {item.highlights && item.highlights.length > 0 && (
-                  <ul className="list-disc pl-5 space-y-0.5 text-xs text-gray-700">
+                  <ul className="list-disc pl-5 space-y-0.5 text-xs text-gray-700 dark:text-[#c8ccd1]">
                     {item.highlights.map((h, hIdx) => (
                       <li key={hIdx}>{h}</li>
                     ))}

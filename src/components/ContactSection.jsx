@@ -11,11 +11,11 @@ export default function ContactSection() {
     <section>
       <SectionHeading id="contact" title="Contact & external links" subtitle="Correspondence & web profiles" />
 
-      <p className="text-[14.5px] text-[#202122] leading-relaxed">
+      <p className="text-[14.5px] text-[#202122] dark:text-[#eaecf0] leading-relaxed">
         Rakib B may be contacted directly via email at{" "}
         <a
           href={`mailto:${contactData.email}`}
-          className="text-[#0645ad] hover:underline font-mono"
+          className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-mono"
         >
           {contactData.email}
         </a>{" "}
@@ -24,7 +24,7 @@ export default function ContactSection() {
           href={contactData.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0645ad] hover:underline font-mono"
+          className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-mono"
         >
           {contactData.phone}
         </a>. Additional web profiles, development repositories, and online activities are maintained across{" "}
@@ -34,7 +34,7 @@ export default function ContactSection() {
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0645ad] hover:underline"
+              className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
             >
               {p.name}
             </a>

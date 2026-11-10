@@ -12,14 +12,14 @@ export default function AcademicSection() {
     <section>
       <SectionHeading id="academic" title="Academic background" subtitle="Education & university affiliation" />
 
-      <div className="space-y-3 text-[#202122] text-[14.5px] leading-relaxed">
+      <div className="space-y-3 text-[#202122] dark:text-[#eaecf0] text-[14.5px] leading-relaxed">
         <p>
           Rakib B is an undergraduate student in{" "}
           <a
             href={academicData.departmentUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#0645ad] hover:underline"
+            className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
           >
             Computer Science and Engineering
           </a>{" "}
@@ -28,12 +28,12 @@ export default function AcademicSection() {
             href={academicData.institutionUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#0645ad] hover:underline"
+            className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
           >
             Daffodil International University
           </a>{" "}
           (DIU) in {academicData.location}. As of the 2026 academic calendar, he is in his{" "}
-          <strong>{academicData.currentStatus}</strong> of study toward a {academicData.degree} ({academicData.degreeShort}).
+          <strong className="text-black dark:text-white">{academicData.currentStatus}</strong> of study toward a {academicData.degree} ({academicData.degreeShort}).
         </p>
 
         <p>

@@ -6,13 +6,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-12 pt-4 pb-12 text-xs text-[#54595d] font-sans">
+    <footer className="mt-12 pt-4 pb-12 text-xs text-[#54595d] dark:text-[#9aa0a6] font-sans border-t border-transparent dark:border-[#3c4043]">
       <div className="flex items-center justify-between gap-3">
         <span>Last update: November 2026</span>
         <button
           onClick={scrollToTop}
           type="button"
-          className="text-[#0645ad] hover:underline cursor-pointer bg-transparent border-0 p-0 text-xs shrink-0"
+          className="text-[#0645ad] dark:text-[#6da8ff] hover:underline cursor-pointer bg-transparent border-0 p-0 text-xs shrink-0"
         >
           ↑ Back to Top
         </button>

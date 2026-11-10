@@ -13,18 +13,19 @@ export default function Introduction() {
     e.preventDefault();
     scrollToTarget(targetId, navigate, location.pathname);
   };
+
   return (
     <section id="about" className="pt-3 pb-4">
       {/* Wikipedia Page Title */}
       <div className="mb-3">
-        <h1 className="text-2xl sm:text-3xl md:text-[32px] font-serif font-normal text-black border-b border-[#a2a9b1] pb-1 tracking-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-[32px] font-serif font-normal text-black dark:text-white border-b border-[#a2a9b1] dark:border-[#54595d] pb-1 tracking-tight">
           {profileData.name}
         </h1>
       </div>
 
       {/* Wikipedia Hatnote */}
-      <div className="text-xs text-[#54595d] italic mb-4 pl-3.5 border-l-2 border-[#a2a9b1] py-0.5 bg-[#f8f9fa]">
-        This article is about the software developer and engineering student. For projects and code repositories, see <a href="#projects" onClick={(e) => handleHatnoteClick(e, 'projects')} className="text-[#0645ad] hover:underline cursor-pointer">Selected Projects</a>.
+      <div className="text-xs text-[#54595d] dark:text-[#9aa0a6] italic mb-4 pl-3.5 border-l-2 border-[#a2a9b1] dark:border-[#54595d] py-1 bg-[#f8f9fa] dark:bg-[#27292d]">
+        This article is about the software developer and engineering student. For projects and code repositories, see <a href="#projects" onClick={(e) => handleHatnoteClick(e, 'projects')} className="text-[#0645ad] dark:text-[#6da8ff] hover:underline cursor-pointer">Selected Projects</a>.
       </div>
 
       {/* Main Wikipedia Content Flow with Floated Infobox */}
@@ -33,14 +34,14 @@ export default function Introduction() {
         <WikiInfobox />
 
         {/* Lead Bio Paragraphs */}
-        <div className="space-y-3 text-[14.5px] leading-relaxed text-[#202122]">
+        <div className="space-y-3 text-[14.5px] leading-relaxed text-[#202122] dark:text-[#eaecf0]">
           <p>
             Hi, I'm Rakib — a CSE student at{" "}
             <a
               href="https://daffodilvarsity.edu.bd/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0645ad] hover:underline"
+              className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
             >
               Daffodil International University
             </a>{" "}
