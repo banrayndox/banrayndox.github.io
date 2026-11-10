@@ -3,6 +3,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { profileData } from '../data/profile.js';
 import { scrollToTarget } from '../utils/scrollToSection.js';
 
+/**
+ * Biographical Infobox
+ * Strictly modeled after Wikipedia's classic Vector biography infobox layout
+ * with standard taxonomy (Residence, Alma mater, Occupation, Fields, Known for, Awards).
+ */
 export default function WikiInfobox() {
   const [imgSrc, setImgSrc] = useState(profileData.avatar.customPhotoUrl);
   const [imgFailed, setImgFailed] = useState(false);
@@ -24,21 +29,24 @@ export default function WikiInfobox() {
   return (
     <aside
       aria-label="Biographical infobox"
-      className="wiki-infobox-container float-none md:float-right md:w-[320px] md:ml-6 mb-6 clear-right"
+      className="wiki-infobox-container float-none md:float-right md:w-[290px] md:ml-6 mb-6 clear-right"
     >
       <table className="wiki-infobox">
         <thead>
           <tr>
-            <th colSpan="2" className="bg-[#eaecf0] text-center font-bold text-base py-1.5 border-b border-[#a2a9b1]">
-              Rakib Biswash
+            <th
+              colSpan="2"
+              className="bg-[#eaecf0] text-center font-bold text-[15px] py-1.5 px-2 border-b border-[#a2a9b1] text-black tracking-normal"
+            >
+              {profileData.name}
             </th>
           </tr>
         </thead>
         <tbody>
           {/* Portrait Image Row */}
           <tr>
-            <td colSpan="2" className="text-center p-2 border-b border-[#eaecf0] bg-white">
-              <div className="w-[180px] h-[215px] mx-auto border border-[#a2a9b1] bg-gray-50 flex items-center justify-center overflow-hidden">
+            <td colSpan="2" className="text-center p-2.5 border-b border-[#eaecf0] bg-white">
+              <div className="w-[170px] h-[205px] mx-auto border border-[#c8ccd1] bg-gray-50 flex items-center justify-center overflow-hidden">
                 <img
                   src={imgSrc}
                   alt={profileData.avatar.altText}
@@ -46,8 +54,8 @@ export default function WikiInfobox() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="text-[11.5px] text-gray-600 mt-1.5 leading-tight font-sans">
-                Rakib Biswash at Daffodil International University (2026)
+              <div className="text-[11px] text-[#54595d] mt-1.5 leading-snug font-sans">
+                Rakib Biswash (2026)
               </div>
             </td>
           </tr>
@@ -58,36 +66,36 @@ export default function WikiInfobox() {
               Personal details
             </th>
           </tr>
+
           <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="w-[38%] text-xs font-bold text-gray-800">
-              Residence / Location
+            <th scope="row" className="w-[36%] text-xs font-bold text-gray-800">
+              Residence
             </th>
             <td className="text-xs text-gray-900">
-              Dhaka, Bangladesh
+              {profileData.location}
             </td>
           </tr>
+
           <tr className="border-b border-[#eaecf0]">
             <th scope="row" className="text-xs font-bold text-gray-800">
               Alma mater
             </th>
             <td className="text-xs text-gray-900">
               <a
-                href="#academic"
-                onClick={(e) => handleLinkClick(e, 'academic')}
-                className="hover:underline cursor-pointer"
+                href="https://daffodilvarsity.edu.bd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0645ad] hover:underline font-medium"
               >
                 Daffodil International University
-              </a> (DIU)
+              </a>{" "}
+              <span className="text-gray-500">(DIU)</span>
+              <div className="text-[11px] text-gray-600 mt-0.5">
+                B.Sc. in CSE · 5th Semester
+              </div>
             </td>
           </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              Academic standing
-            </th>
-            <td className="text-xs text-gray-900">
-              B.Sc. in CSE (5th Semester)
-            </td>
-          </tr>
+
           <tr className="border-b border-[#eaecf0]">
             <th scope="row" className="text-xs font-bold text-gray-800">
               Occupation
@@ -97,15 +105,25 @@ export default function WikiInfobox() {
             </td>
           </tr>
 
-          {/* Infobox Subheader: Technical work */}
-          <tr>
-            <th colSpan="2" className="wiki-infobox-header">
-              Engineering & Projects
-            </th>
-          </tr>
           <tr className="border-b border-[#eaecf0]">
             <th scope="row" className="text-xs font-bold text-gray-800">
-              Notable projects
+              Fields
+            </th>
+            <td className="text-xs text-gray-900">
+              Software Engineering · Artificial Intelligence · Competitive Programming
+            </td>
+          </tr>
+
+          {/* Infobox Subheader: Engineering & Notable work */}
+          <tr>
+            <th colSpan="2" className="wiki-infobox-header">
+              Career & notable work
+            </th>
+          </tr>
+
+          <tr className="border-b border-[#eaecf0]">
+            <th scope="row" className="text-xs font-bold text-gray-800">
+              Known for
             </th>
             <td className="text-xs text-gray-900">
               <ul className="list-disc pl-4 space-y-0.5 m-0">
@@ -113,7 +131,7 @@ export default function WikiInfobox() {
                   <a
                     href="#diu-copilot"
                     onClick={(e) => handleLinkClick(e, 'diu-copilot')}
-                    className="cursor-pointer hover:underline"
+                    className="cursor-pointer text-[#0645ad] hover:underline"
                   >
                     DIU Copilot
                   </a>
@@ -122,7 +140,7 @@ export default function WikiInfobox() {
                   <a
                     href="#diu-class-coordination-system"
                     onClick={(e) => handleLinkClick(e, 'diu-class-coordination-system')}
-                    className="cursor-pointer hover:underline"
+                    className="cursor-pointer text-[#0645ad] hover:underline"
                   >
                     DIU Class Coordination
                   </a>
@@ -130,34 +148,22 @@ export default function WikiInfobox() {
               </ul>
             </td>
           </tr>
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              Key fields
-            </th>
-            <td className="text-xs text-gray-900">
-              Full-Stack Systems · AI Engineering · Algorithms
-            </td>
-          </tr>
-          {/* 
-          // Future appointment row template:
-          <tr className="border-b border-[#eaecf0]">
-            <th scope="row" className="text-xs font-bold text-gray-800">
-              Appointments
-            </th>
-            <td className="text-xs text-gray-900">
-              Company / Role Title
-            </td>
-          </tr>
-          */}
+
           <tr>
             <th scope="row" className="text-xs font-bold text-gray-800">
-              Honours
+              Awards
             </th>
             <td className="text-xs text-gray-900">
               <ul className="list-disc pl-4 space-y-0.5 m-0">
-                <li><strong>Champion</strong>, DIU Modal-X AI Hackathon (2026)</li>
-                <li><strong>Runner-Up</strong>, BreakOut Algorithm Contest (2026)</li>
-                <li><strong>Runner-Up</strong>, DIU Codetrap Contest (2025)</li>
+                <li>
+                  <strong>Champion</strong>, DIU Modal-X AI Hackathon (2026)
+                </li>
+                <li>
+                  <strong>Runner-Up</strong>, BreakOut Algorithm Contest (2026)
+                </li>
+                <li>
+                  <strong>Runner-Up</strong>, DIU Codetrap Contest (2025)
+                </li>
               </ul>
             </td>
           </tr>
