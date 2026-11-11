@@ -14,12 +14,12 @@ export const codeData = {
   curatedRepositories: [
     {
       name: "ml_ai",
-      description: "Comprehensive Machine Learning & AI Curriculum — Structured course covering Python foundations, classical ML from scratch, deep learning (ANN, CNN, RNN, GAN, RL, RAG), and applied production systems.",
+      description: "Comprehensive Machine Learning & AI Curriculum — Structured course covering Python Fundamentals (Parts 1–5), Data Science Toolkit, classical ML from scratch, deep learning (ANN, CNN, RNN, GAN, RL, RAG), and applied production systems.",
       language: "Jupyter Notebook / Python",
       stars: 0,
       forks: 0,
       url: "https://github.com/banrayndox/ml_ai",
-      topics: ["machine-learning", "deep-learning", "reinforcement-learning", "rag", "pytorch", "transformers"]
+      topics: ["python-fundamentals", "machine-learning", "deep-learning", "reinforcement-learning", "rag", "pytorch", "transformers"]
     },
     {
       name: "ssm-frontend",
