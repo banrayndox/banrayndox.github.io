@@ -2,45 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { ThemeContext } from './ThemeContext.js';
 
 export function ThemeProvider({ children }) {
-  // Mode can be 'auto', 'light', or 'dark'
-  // Auto is explicitly set as white/light as requested
+  // Mode can be 'light' (default) or 'dark'
   const [themeMode, setThemeMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('wiki-theme');
-      if (saved === 'light' || saved === 'dark' || saved === 'auto') {
-        return saved;
+      if (saved === 'dark') {
+        return 'dark';
       }
     }
-    return 'auto';
+    return 'light';
   });
 
-  const [resolvedTheme, setResolvedTheme] = useState('light');
+  const resolvedTheme = themeMode;
 
   useEffect(() => {
     const root = document.documentElement;
-
-    const applyTheme = () => {
-      // 'auto' resolves to white ('light'); only explicit 'dark' mode renders dark
-      const active = themeMode === 'dark' ? 'dark' : 'light';
-
-      setResolvedTheme(active);
-
-      if (active === 'dark') {
-        root.classList.add('dark');
-        root.setAttribute('data-theme', 'dark');
-      } else {
-        root.classList.remove('dark');
-        root.setAttribute('data-theme', 'light');
-      }
-    };
-
-    applyTheme();
+    if (themeMode === 'dark') {
+      root.classList.add('dark');
+      root.setAttribute('data-theme', 'dark');
+    } else {
+      root.classList.remove('dark');
+      root.setAttribute('data-theme', 'light');
+    }
   }, [themeMode]);
 
   const selectTheme = (mode) => {
-    setThemeMode(mode);
+    const validMode = mode === 'dark' ? 'dark' : 'light';
+    setThemeMode(validMode);
     try {
-      localStorage.setItem('wiki-theme', mode);
+      localStorage.setItem('wiki-theme', validMode);
     } catch {
       // Storage access blocked or quota exceeded
     }

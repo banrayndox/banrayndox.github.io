@@ -96,22 +96,11 @@ export default function Navbar() {
             </button>
 
             {appearanceOpen && (
-              <div className="absolute right-0 mt-1.5 w-44 bg-white dark:bg-[#202122] border border-[#a2a9b1] dark:border-[#54595d] shadow-lg rounded-xs p-3 z-50 text-xs font-sans">
+              <div className="absolute right-0 mt-1.5 w-40 bg-white dark:bg-[#202122] border border-[#a2a9b1] dark:border-[#54595d] shadow-lg rounded-xs p-3 z-50 text-xs font-sans">
                 <div className="font-bold text-black dark:text-white text-xs border-b border-[#eaecf0] dark:border-[#3c4043] pb-1.5 mb-2.5">
                   Color mode
                 </div>
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-[#27292d] p-1 rounded-xs">
-                    <input
-                      type="radio"
-                      name="wiki-theme"
-                      value="auto"
-                      checked={themeMode === 'auto'}
-                      onChange={() => selectTheme('auto')}
-                      className="accent-[#0645ad] dark:accent-[#6da8ff] cursor-pointer"
-                    />
-                    <span className="text-[#202122] dark:text-[#eaecf0]">Automatic</span>
-                  </label>
                   <label className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-[#27292d] p-1 rounded-xs">
                     <input
                       type="radio"
