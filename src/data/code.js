@@ -1,16 +1,26 @@
 /**
  * Code & Open Source Configuration
  * Real GitHub username: banrayndox
- * Curated specifically for the two active open-source systems: Smart Section Management and DIU Copilot.
+ * Curated for active open-source projects: Machine Learning & AI Curriculum,
+ * Smart Section Management, and DIU Copilot.
  */
 export const codeData = {
   githubUsername: "banrayndox",
   githubProfileUrl: "https://github.com/banrayndox",
   
-  overview: "Public repositories and source code implementations for university systems and artificial intelligence tooling. Open-source repositories are maintained across dedicated frontend, backend, and agent service modules.",
+  overview: "Public repositories and source code implementations for machine learning pipelines, university systems, and artificial intelligence tooling. Maintained across specialized curriculum notebooks, frontend clients, backend gateways, and autonomous microservices.",
   
-  // Curated public repositories representing the two open-source projects
+  // Curated public repositories representing active open-source work
   curatedRepositories: [
+    {
+      name: "ml_ai",
+      description: "Comprehensive Machine Learning & AI Curriculum — Structured course covering Python foundations, classical ML from scratch, deep learning (ANN, CNN, RNN, GAN, RL, RAG), and applied production systems.",
+      language: "Jupyter Notebook / Python",
+      stars: 0,
+      forks: 0,
+      url: "https://github.com/banrayndox/ml_ai",
+      topics: ["machine-learning", "deep-learning", "reinforcement-learning", "rag", "pytorch", "transformers"]
+    },
     {
       name: "ssm-frontend",
       description: "Frontend web client for Smart Section Management (SSM), providing an intuitive interface for university course and section scheduling.",
