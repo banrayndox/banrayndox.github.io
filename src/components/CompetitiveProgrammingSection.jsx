@@ -16,13 +16,6 @@ export default function CompetitiveProgrammingSection() {
       <ul className="space-y-3.5 list-disc pl-5 text-[14px] text-[#202122] dark:text-[#eaecf0] leading-relaxed mb-4">
         {competitiveProgrammingData.achievements.map((item, idx) => (
           <li key={idx} className="pl-1">
-            {item.photos && item.photos.length > 0 && (
-              <WikiThumbnail
-                photos={item.photos}
-                contest={item.contest}
-                edition={item.edition}
-              />
-            )}
             <span className="font-semibold text-gray-950 dark:text-white">{item.award}</span> —{" "}
             <strong className="text-black dark:text-white">{item.contest}</strong> ({item.edition}), organized by {item.organizer}.
             <p className="text-xs sm:text-[13px] text-gray-700 dark:text-[#c8ccd1] mt-0.5 mb-0 leading-relaxed">
@@ -32,8 +25,31 @@ export default function CompetitiveProgrammingSection() {
         ))}
       </ul>
 
+      {/* Wikipedia Contest Gallery (Zero whitespace, clean 3-column responsive showcase) */}
+      <div className="my-4">
+        <div className="text-[11px] font-semibold text-[#54595d] dark:text-[#9aa0a6] uppercase tracking-wider mb-2 font-sans flex items-center justify-between border-b border-[#eaecf0] dark:border-[#3c4043] pb-1">
+          <span>Contest photographs & awards gallery</span>
+          <span className="text-[10px] font-normal text-gray-400 dark:text-gray-500 font-mono">
+            archived event photographs
+          </span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {competitiveProgrammingData.achievements.map((item, idx) => (
+            item.photos && item.photos.length > 0 && (
+              <WikiThumbnail
+                key={idx}
+                layout="gallery"
+                photos={item.photos}
+                contest={item.contest}
+                edition={item.edition}
+              />
+            )
+          ))}
+        </div>
+      </div>
+
       {/* Online Profiles & Practice (Wikipedia Prose Format) */}
-      <p className="clear-both text-[14px] text-[#202122] dark:text-[#eaecf0] leading-relaxed pt-2 border-t border-[#eaecf0] dark:border-[#3c4043]">
+      <p className="text-[14px] text-[#202122] dark:text-[#eaecf0] leading-relaxed pt-3 border-t border-[#eaecf0] dark:border-[#3c4043]">
         For online contest practice and algorithmic problem solving, Rakib B actively competes on{" "}
         <a
           href="https://codeforces.com/profile/airayndox"

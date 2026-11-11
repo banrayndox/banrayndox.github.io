@@ -1,4 +1,6 @@
 import modalxChampion from '../assets/modalx/modalx-champion.jpg';
+import breakoutPodium from '../assets/breakout/breakout-podium.jpg';
+import breakoutStage from '../assets/breakout/breakout-stage.jpg';
 import codetrapTrophy from '../assets/codetrap/codetrap-trophy.jpg';
 import codetrapPodium from '../assets/codetrap/codetrap-podium.jpg';
 import codetrapStairs from '../assets/codetrap/codetrap-stairs.jpg';
@@ -35,9 +37,25 @@ export const competitiveProgrammingData = {
       contest: "DIU BreakOut Algorithm Programming Contest",
       edition: "Summer 2026",
       organizer: "Department of Software Engineering, DIU",
-      award: "Runner-Up (Podium Finisher)",
+      award: "1st Runner-Up (Podium Finisher)",
       type: "Algorithm Contest",
-      details: "Ranked among top performers in algorithmic problem solving under timed contest conditions covering graph theory, dynamic programming, and combinatorial problems."
+      details: "Ranked 1st Runner-Up in algorithmic problem solving under timed contest conditions covering graph theory, dynamic programming, and combinatorial problems.",
+      photos: [
+        {
+          src: breakoutPodium,
+          title: "1st Runner-Up Trophy",
+          alt: "Rakib B with the 1st Runner-Up trophy at the DIU BreakOut Algorithm Programming Contest",
+          caption: "Rakib B with the 1st Runner-Up trophy at the DIU BreakOut Algorithm Programming Contest (2026).",
+          objectPosition: "object-top"
+        },
+        {
+          src: breakoutStage,
+          title: "Award Ceremony",
+          alt: "Prize giving ceremony on stage for the DIU BreakOut Algorithm Programming Contest with faculty members",
+          caption: "Prize giving ceremony on stage for the DIU BreakOut Algorithm Programming Contest with faculty members.",
+          objectPosition: "object-center"
+        }
+      ]
     },
     {
       contest: "DIU Codetrap Programming Contest",

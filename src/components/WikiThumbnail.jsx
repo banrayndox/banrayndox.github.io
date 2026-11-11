@@ -6,7 +6,7 @@ import React, { useState, useEffect, useCallback } from 'react';
  * subtle caption box, MediaViewer enlargement icon, multi-photo switching,
  * and a full-screen Wikipedia MediaViewer modal.
  */
-export default function WikiThumbnail({ photos = [], contest, edition }) {
+export default function WikiThumbnail({ photos = [], contest, edition, layout = "gallery" }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -40,23 +40,41 @@ export default function WikiThumbnail({ photos = [], contest, edition }) {
 
   if (!photos || photos.length === 0) return null;
 
+  const isGallery = layout === "gallery";
+
   return (
     <>
-      {/* Wikipedia Thumbnail Figure (Right-aligned float on desktop) */}
+      {/* Wikipedia Thumbnail Figure */}
       <figure
         aria-label={`Photograph from ${contest}`}
-        className="sm:float-right sm:clear-right sm:w-[270px] sm:ml-4 sm:mb-3 my-3 border border-[#c8ccd1] dark:border-[#54595d] bg-[#f8f9fa] dark:bg-[#27292d] p-1.5 text-xs rounded-[2px] shadow-xs select-none"
+        className={
+          isGallery
+            ? "border border-[#c8ccd1] dark:border-[#54595d] bg-[#f8f9fa] dark:bg-[#27292d] p-1.5 text-xs rounded-[2px] shadow-xs select-none flex flex-col justify-between h-full"
+            : "sm:float-right sm:clear-right sm:w-[270px] sm:ml-4 sm:mb-3 my-3 border border-[#c8ccd1] dark:border-[#54595d] bg-[#f8f9fa] dark:bg-[#27292d] p-1.5 text-xs rounded-[2px] shadow-xs select-none"
+        }
       >
+        {/* Gallery Header (only in gallery mode) */}
+        {isGallery && (
+          <div className="flex items-center justify-between pb-1 mb-1 border-b border-[#eaecf0] dark:border-[#3c4043] font-sans">
+            <span className="font-semibold text-[11.5px] text-gray-900 dark:text-white truncate" title={contest}>
+              {contest}
+            </span>
+            <span className="text-[10px] text-[#54595d] dark:text-[#9aa0a6] font-mono shrink-0 ml-1">
+              {edition}
+            </span>
+          </div>
+        )}
+
         {/* Thumbnail Inner Image Box */}
         <div
           onClick={() => setIsViewerOpen(true)}
-          className="border border-[#c8ccd1] dark:border-[#3c4043] bg-white dark:bg-[#202122] overflow-hidden cursor-pointer group relative"
+          className="border border-[#c8ccd1] dark:border-[#3c4043] bg-white dark:bg-[#202122] overflow-hidden cursor-pointer group relative flex-1"
           title="Click to enlarge (Wikipedia MediaViewer)"
         >
           <img
             src={currentPhoto.src}
             alt={currentPhoto.alt || `${contest} photo`}
-            className={`w-full h-[185px] object-cover ${currentPhoto.objectPosition || 'object-center'} transition-transform duration-200 group-hover:scale-[1.02]`}
+            className={`w-full ${isGallery ? "h-[160px]" : "h-[185px]"} object-cover ${currentPhoto.objectPosition || 'object-center'} transition-transform duration-200 group-hover:scale-[1.02]`}
             loading="lazy"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors pointer-events-none" />
