@@ -145,6 +145,15 @@ export default function WikiInfobox() {
                     DIU Copilot
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="#code"
+                    onClick={(e) => handleLinkClick(e, 'code')}
+                    className="cursor-pointer text-[#0645ad] dark:text-[#6da8ff] hover:underline"
+                  >
+                    ML & AI Curriculum
+                  </a>
+                </li>
               </ul>
             </td>
           </tr>
