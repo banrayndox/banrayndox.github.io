@@ -45,7 +45,7 @@ export default function WikiThumbnail({ photos = [], contest, edition }) {
       {/* Wikipedia Thumbnail Figure (Right-aligned float on desktop) */}
       <figure
         aria-label={`Photograph from ${contest}`}
-        className="sm:float-right sm:w-[270px] sm:ml-4 sm:mb-3 my-3 border border-[#c8ccd1] dark:border-[#54595d] bg-[#f8f9fa] dark:bg-[#27292d] p-1.5 text-xs rounded-[2px] shadow-xs select-none"
+        className="sm:float-right sm:clear-right sm:w-[270px] sm:ml-4 sm:mb-3 my-3 border border-[#c8ccd1] dark:border-[#54595d] bg-[#f8f9fa] dark:bg-[#27292d] p-1.5 text-xs rounded-[2px] shadow-xs select-none"
       >
         {/* Thumbnail Inner Image Box */}
         <div
@@ -56,7 +56,7 @@ export default function WikiThumbnail({ photos = [], contest, edition }) {
           <img
             src={currentPhoto.src}
             alt={currentPhoto.alt || `${contest} photo`}
-            className="w-full h-[180px] object-cover object-top transition-transform duration-200 group-hover:scale-[1.02]"
+            className={`w-full h-[185px] object-cover ${currentPhoto.objectPosition || 'object-center'} transition-transform duration-200 group-hover:scale-[1.02]`}
             loading="lazy"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors pointer-events-none" />

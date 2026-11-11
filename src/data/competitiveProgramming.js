@@ -1,3 +1,4 @@
+import modalxChampion from '../assets/modalx/modalx-champion.jpg';
 import codetrapTrophy from '../assets/codetrap/codetrap-trophy.jpg';
 import codetrapPodium from '../assets/codetrap/codetrap-podium.jpg';
 import codetrapStairs from '../assets/codetrap/codetrap-stairs.jpg';
@@ -19,7 +20,16 @@ export const competitiveProgrammingData = {
       organizer: "DIU AI Club",
       award: "Champion (1st Place)",
       type: "AI Hackathon",
-      details: "Awarded Champion for architecting and presenting an innovative AI-driven software solution evaluated on technical implementation, system architecture, and real-world utility."
+      details: "Awarded Champion (Team EchoMind) for architecting and presenting an AI-powered multi-modal presentation assessment system evaluated on machine learning architecture, technical implementation, and real-world utility.",
+      photos: [
+        {
+          src: modalxChampion,
+          title: "Champion Award Ceremony",
+          alt: "Team EchoMind awarded Champion at the DIU Modal-X AI Hackathon (ModalX-AI Challenge)",
+          caption: "Rakib B with Team EchoMind receiving the Champion award at the DIU Modal-X AI Hackathon (2026), organized by DIU AI Club.",
+          objectPosition: "object-center"
+        }
+      ]
     },
     {
       contest: "DIU BreakOut Algorithm Programming Contest",
