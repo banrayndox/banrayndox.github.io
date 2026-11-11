@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionHeading from './SectionHeading.jsx';
+import WikiThumbnail from './WikiThumbnail.jsx';
 import { competitiveProgrammingData } from '../data/competitiveProgramming.js';
 
 export default function CompetitiveProgrammingSection() {
@@ -15,6 +16,13 @@ export default function CompetitiveProgrammingSection() {
       <ul className="space-y-3.5 list-disc pl-5 text-[14px] text-[#202122] dark:text-[#eaecf0] leading-relaxed mb-4">
         {competitiveProgrammingData.achievements.map((item, idx) => (
           <li key={idx} className="pl-1">
+            {item.photos && item.photos.length > 0 && (
+              <WikiThumbnail
+                photos={item.photos}
+                contest={item.contest}
+                edition={item.edition}
+              />
+            )}
             <span className="font-semibold text-gray-950 dark:text-white">{item.award}</span> —{" "}
             <strong className="text-black dark:text-white">{item.contest}</strong> ({item.edition}), organized by {item.organizer}.
             <p className="text-xs sm:text-[13px] text-gray-700 dark:text-[#c8ccd1] mt-0.5 mb-0 leading-relaxed">
@@ -25,7 +33,7 @@ export default function CompetitiveProgrammingSection() {
       </ul>
 
       {/* Online Profiles & Practice (Wikipedia Prose Format) */}
-      <p className="text-[14px] text-[#202122] dark:text-[#eaecf0] leading-relaxed pt-2 border-t border-[#eaecf0] dark:border-[#3c4043]">
+      <p className="clear-both text-[14px] text-[#202122] dark:text-[#eaecf0] leading-relaxed pt-2 border-t border-[#eaecf0] dark:border-[#3c4043]">
         For online contest practice and algorithmic problem solving, Rakib B actively competes on{" "}
         <a
           href="https://codeforces.com/profile/airayndox"

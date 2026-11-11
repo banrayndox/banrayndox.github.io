@@ -1,3 +1,7 @@
+import codetrapTrophy from '../assets/codetrap/codetrap-trophy.jpg';
+import codetrapPodium from '../assets/codetrap/codetrap-podium.jpg';
+import codetrapStairs from '../assets/codetrap/codetrap-stairs.jpg';
+
 /**
  * Competitive Programming & Hackathon Achievements
  * All contest records, rankings, and platform profiles.
@@ -31,7 +35,27 @@ export const competitiveProgrammingData = {
       organizer: "Department of Software Engineering, DIU",
       award: "Runner-Up (Podium Finisher)",
       type: "Algorithm Contest",
-      details: "Secured a top runner-up finish in timed algorithmic problem solving, computational complexity analysis, and core data structure applications."
+      details: "Secured a top runner-up finish in timed algorithmic problem solving, computational complexity analysis, and core data structure applications.",
+      photos: [
+        {
+          src: codetrapTrophy,
+          title: "Trophy Close-Up",
+          alt: "Rakib B holding the Runner-Up trophy at the DIU Codetrap Programming Contest",
+          caption: "Rakib B holding the Runner-Up trophy at the DIU Codetrap Programming Contest (Summer 2025)."
+        },
+        {
+          src: codetrapPodium,
+          title: "Award Ceremony",
+          alt: "Podium winners and university faculty on stage at DIU Codetrap",
+          caption: "Podium finishers and faculty members at the DIU Codetrap award ceremony."
+        },
+        {
+          src: codetrapStairs,
+          title: "Campus Stairs",
+          alt: "Rakib B with the Runner-Up trophy on university stairs at sunset",
+          caption: "Rakib B on the university campus stairs following the DIU Codetrap contest."
+        }
+      ]
     }
   ],
 
