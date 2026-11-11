@@ -27,8 +27,8 @@ export const newsData = [
   {
     id: "breakout-contest-podium",
     date: "Summer 2026",
-    headline: "Achieved podium position in BreakOut Algorithm Programming Contest",
-    content: "Secured a top runner-up finish in the Summer 2026 BreakOut Algorithm Programming Contest organized at Daffodil International University.",
+    headline: "Achieved podium position in DIU BreakOut Algorithm Programming Contest",
+    content: "Secured a top runner-up finish in the Summer 2026 DIU BreakOut Algorithm Programming Contest organized by the Department of Software Engineering, DIU.",
     link: {
       text: "Competitive Programming Details",
       url: "#competitive-programming"

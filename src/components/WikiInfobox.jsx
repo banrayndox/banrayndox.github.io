@@ -168,7 +168,7 @@ export default function WikiInfobox() {
                   <strong className="text-black dark:text-white">Champion</strong>, DIU Modal-X AI Hackathon (2026)
                 </li>
                 <li>
-                  <strong className="text-black dark:text-white">Runner-Up</strong>, BreakOut Algorithm Contest (2026)
+                  <strong className="text-black dark:text-white">Runner-Up</strong>, DIU BreakOut Algorithm Contest (2026)
                 </li>
                 <li>
                   <strong className="text-black dark:text-white">Runner-Up</strong>, DIU Codetrap Contest (2025)

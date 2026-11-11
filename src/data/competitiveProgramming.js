@@ -12,15 +12,15 @@ export const competitiveProgrammingData = {
     {
       contest: "DIU Modal-X AI Hackathon",
       edition: "2026",
-      organizer: "Daffodil International University",
+      organizer: "DIU AI Club",
       award: "Champion (1st Place)",
       type: "AI Hackathon",
       details: "Awarded Champion for architecting and presenting an innovative AI-driven software solution evaluated on technical implementation, system architecture, and real-world utility."
     },
     {
-      contest: "BreakOut Algorithm Programming Contest",
+      contest: "DIU BreakOut Algorithm Programming Contest",
       edition: "Summer 2026",
-      organizer: "Department of Computer Science & Engineering, DIU",
+      organizer: "Department of Software Engineering, DIU",
       award: "Runner-Up (Podium Finisher)",
       type: "Algorithm Contest",
       details: "Ranked among top performers in algorithmic problem solving under timed contest conditions covering graph theory, dynamic programming, and combinatorial problems."
@@ -28,7 +28,7 @@ export const competitiveProgrammingData = {
     {
       contest: "DIU Codetrap Programming Contest",
       edition: "Summer 2025",
-      organizer: "Department of Computer Science & Engineering, DIU",
+      organizer: "Department of Software Engineering, DIU",
       award: "Runner-Up (Podium Finisher)",
       type: "Algorithm Contest",
       details: "Secured a top runner-up finish in timed algorithmic problem solving, computational complexity analysis, and core data structure applications."
