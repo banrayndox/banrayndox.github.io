@@ -28,10 +28,8 @@ export default function WikiTOC() {
       title: "Selected projects",
       href: "projects",
       subs: [
-        { num: "3.1", title: "DIU Copilot", href: "diu-copilot" },
-        { num: "3.2", title: "DIU Class Coordination System", href: "diu-class-coordination-system" },
-        { num: "3.3", title: "Online Compiler", href: "online-compiler" },
-        { num: "3.4", title: "C Backend Project", href: "c-backend-project" }
+        { num: "3.1", title: "Smart Section Management", href: "smart-section-management" },
+        { num: "3.2", title: "DIU Copilot", href: "diu-copilot" }
       ]
     },
     {

@@ -129,20 +129,20 @@ export default function WikiInfobox() {
               <ul className="list-disc pl-4 space-y-0.5 m-0">
                 <li>
                   <a
+                    href="#smart-section-management"
+                    onClick={(e) => handleLinkClick(e, 'smart-section-management')}
+                    className="cursor-pointer text-[#0645ad] dark:text-[#6da8ff] hover:underline"
+                  >
+                    Smart Section Management
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="#diu-copilot"
                     onClick={(e) => handleLinkClick(e, 'diu-copilot')}
                     className="cursor-pointer text-[#0645ad] dark:text-[#6da8ff] hover:underline"
                   >
                     DIU Copilot
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#diu-class-coordination-system"
-                    onClick={(e) => handleLinkClick(e, 'diu-class-coordination-system')}
-                    className="cursor-pointer text-[#0645ad] dark:text-[#6da8ff] hover:underline"
-                  >
-                    DIU Class Coordination
                   </a>
                 </li>
               </ul>

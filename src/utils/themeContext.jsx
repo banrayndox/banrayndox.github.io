@@ -3,6 +3,7 @@ import { ThemeContext } from './ThemeContext.js';
 
 export function ThemeProvider({ children }) {
   // Mode can be 'auto', 'light', or 'dark'
+  // Auto is explicitly set as white/light as requested
   const [themeMode, setThemeMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('wiki-theme');
@@ -17,18 +18,10 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     const root = document.documentElement;
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     const applyTheme = () => {
-      let active = 'light';
-      if (themeMode === 'dark') {
-        active = 'dark';
-      } else if (themeMode === 'light') {
-        active = 'light';
-      } else {
-        // 'auto' - follow system
-        active = mediaQuery.matches ? 'dark' : 'light';
-      }
+      // 'auto' resolves to white ('light'); only explicit 'dark' mode renders dark
+      const active = themeMode === 'dark' ? 'dark' : 'light';
 
       setResolvedTheme(active);
 
@@ -42,15 +35,6 @@ export function ThemeProvider({ children }) {
     };
 
     applyTheme();
-
-    const handleChange = () => {
-      if (themeMode === 'auto') {
-        applyTheme();
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
   }, [themeMode]);
 
   const selectTheme = (mode) => {

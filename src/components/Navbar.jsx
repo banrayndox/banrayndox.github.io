@@ -8,7 +8,7 @@ export default function Navbar() {
   const [appearanceOpen, setAppearanceOpen] = useState(false);
   const appearanceMenuRef = useRef(null);
 
-  const { themeMode, resolvedTheme, selectTheme } = useTheme();
+  const { themeMode, selectTheme } = useTheme();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -38,11 +38,6 @@ export default function Navbar() {
     e.preventDefault();
     scrollToTarget(targetId, navigate, location.pathname);
     setMobileMenuOpen(false);
-  };
-
-  const getThemeIcon = () => {
-    if (themeMode === 'auto') return resolvedTheme === 'dark' ? '🌓' : '🌓';
-    return themeMode === 'dark' ? '🌙' : '☀️';
   };
 
   return (
@@ -92,12 +87,11 @@ export default function Navbar() {
               type="button"
               onClick={() => setAppearanceOpen(!appearanceOpen)}
               className="flex items-center gap-1 px-1.5 py-0.5 text-xs text-[#54595d] dark:text-[#c8ccd1] hover:text-black dark:hover:text-white border border-transparent hover:border-[#a2a9b1] dark:hover:border-[#54595d] rounded-xs cursor-pointer bg-transparent"
-              title="Appearance settings (color theme)"
+              title="Appearance settings"
               aria-label="Appearance settings"
               aria-expanded={appearanceOpen}
             >
-              <span className="text-[12px]">{getThemeIcon()}</span>
-              <span className="hidden sm:inline">Appearance</span>
+              <span>Appearance</span>
               <span className="text-[9px]">▾</span>
             </button>
 

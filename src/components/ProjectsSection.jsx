@@ -5,7 +5,7 @@ import { projectsData } from '../data/projects.js';
 /**
  * ProjectsSection
  * Formatted as an authentic Wikipedia biographical project dossier with formal entries.
- * Avoids rigid table grids while maintaining a formal, structured encyclopedia format.
+ * Features dedicated repository links (Frontend, Backend, Agent) and live deployment links.
  */
 export default function ProjectsSection() {
   return (
@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       <SectionHeading id="projects" title="Selected projects" subtitle="Technical systems & software" />
 
       <p className="text-[14.5px] text-[#202122] dark:text-[#eaecf0] leading-relaxed mb-5">
-        Rakib B has developed and contributed to several software systems, ranging from full-stack university coordination tools and retrieval-augmented generation (RAG) campus assistants to low-level POSIX socket servers.
+        Rakib B has engineered software systems focused on academic process optimization and artificial intelligence, notably a university section scheduling platform and a multi-agent digital campus assistant.
       </p>
 
       <div className="space-y-6">
@@ -55,8 +55,19 @@ export default function ProjectsSection() {
                 <span>{project.technologies.join(" · ")}</span>
               </div>
 
-              <div className="flex items-center gap-3 font-mono text-xs shrink-0">
-                {project.githubUrl && (
+              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 font-mono text-xs shrink-0">
+                {project.repositories && project.repositories.map((repo) => (
+                  <a
+                    key={repo.label}
+                    href={repo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-bold"
+                  >
+                    [{repo.label} Repo]
+                  </a>
+                ))}
+                {project.githubUrl && !project.repositories && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
