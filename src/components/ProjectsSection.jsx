@@ -74,7 +74,7 @@ export default function ProjectsSection() {
                     rel="noopener noreferrer"
                     className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-bold"
                   >
-                    [Source Code]
+                    [GitHub Repository]
                   </a>
                 )}
                 {project.hasLiveDemo && project.liveUrl && (
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
                     rel="noopener noreferrer"
                     className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-bold"
                   >
-                    [Live Deployment]
+                    [Live Demo]
                   </a>
                 )}
               </div>
