@@ -40,31 +40,13 @@ export const codeData = {
       topics: ["nodejs", "express", "mongodb", "api"]
     },
     {
-      name: "DIU_COPILOT_frontend",
-      description: "Client web application for DIU Copilot, enabling conversational academic assistance and natural language queries.",
-      language: "JavaScript",
+      name: "mvp-diu-copilot",
+      description: "AI-Powered Digital Campus Assistant for Daffodil International University — unified production MVP featuring intelligent multi-agent routing, real-time chat with Socket.IO & Redis, and interactive canvas artifact generation.",
+      language: "JavaScript / Python",
       stars: 0,
       forks: 0,
-      url: "https://github.com/banrayndox/DIU_COPILOT_frontend",
-      topics: ["react", "chat-ui", "campus-assistant"]
-    },
-    {
-      name: "DIU_COPILOT_backend",
-      description: "Backend server for DIU Copilot, coordinating user sessions, document indexes, and multi-service routing.",
-      language: "JavaScript",
-      stars: 0,
-      forks: 0,
-      url: "https://github.com/banrayndox/DIU_COPILOT_backend",
-      topics: ["nodejs", "express", "mongodb", "backend"]
-    },
-    {
-      name: "DIU_COPILOT_agent",
-      description: "Autonomous AI agent microservice for DIU Copilot, powered by LangGraph reasoning workflows and vector retrieval pipelines.",
-      language: "Python",
-      stars: 0,
-      forks: 0,
-      url: "https://github.com/banrayndox/DIU_COPILOT_agent",
-      topics: ["langgraph", "fastapi", "rag", "chromadb", "ai-agent"]
+      url: "https://github.com/banrayndox/mvp-diu-copilot",
+      topics: ["mern-stack", "socketio", "redis", "langchain", "ai-agent", "campus-assistant", "vite", "tailwind"]
     }
   ]
 };
