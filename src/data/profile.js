@@ -9,7 +9,7 @@ export const profileData = {
   title: "Computer Science & Engineering Student | Software Developer | AI Enthusiast",
   institution: "Daffodil International University",
   location: "Dhaka, Bangladesh",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Rakib_B_TraineeResume.pdf",
   
   // Profile Photo configuration:
   avatar: {
@@ -32,6 +32,6 @@ export const profileData = {
     { label: "Codeforces", url: "https://codeforces.com/profile/airayndox" },
     { label: "LeetCode", url: "https://leetcode.com/u/banrayndox/" },
     { label: "Email", url: "mailto:banrayndox@gmail.com" },
-    { label: "Resume", url: "#resume", note: "Available upon request / direct download" },
+    { label: "Resume (PDF)", url: "/Rakib_B_TraineeResume.pdf", note: "Download & view full Trainee Resume" },
   ]
 };

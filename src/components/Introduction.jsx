@@ -50,6 +50,57 @@ export default function Introduction() {
           <p>
             I actively compete in programming contests while engineering full-stack software systems and exploring applied AI applications.
           </p>
+
+          {/* Quick links & Documents */}
+          <div className="pt-1 text-xs text-[#54595d] dark:text-[#9aa0a6] flex flex-wrap items-center gap-x-2 gap-y-1 font-sans">
+            <span className="font-semibold text-gray-900 dark:text-gray-100">Profiles & Documents:</span>
+            <a
+              href="/Rakib_B_TraineeResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0645ad] dark:text-[#6da8ff] font-semibold hover:underline inline-flex items-center gap-0.5"
+              title="Download or view Rakib B's Trainee Resume (PDF)"
+            >
+              <span>📄 Resume (PDF)</span>
+              <span className="text-[10px]">↗</span>
+            </a>
+            <span>·</span>
+            <a
+              href="https://github.com/banrayndox"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
+            >
+              GitHub
+            </a>
+            <span>·</span>
+            <a
+              href="https://linkedin.com/in/banrayndox"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
+            >
+              LinkedIn
+            </a>
+            <span>·</span>
+            <a
+              href="https://codeforces.com/profile/airayndox"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
+            >
+              Codeforces
+            </a>
+            <span>·</span>
+            <a
+              href="https://leetcode.com/u/banrayndox/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0645ad] dark:text-[#6da8ff] hover:underline"
+            >
+              LeetCode
+            </a>
+          </div>
         </div>
 
         {/* Wikipedia Table of Contents */}

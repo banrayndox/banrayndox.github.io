@@ -114,6 +114,24 @@ export default function WikiInfobox() {
             </td>
           </tr>
 
+          <tr className="border-b border-[#eaecf0] dark:border-[#3c4043]">
+            <th scope="row" className="text-xs font-bold text-gray-800 dark:text-[#eaecf0]">
+              Resume / CV
+            </th>
+            <td className="text-xs text-gray-900 dark:text-[#c8ccd1]">
+              <a
+                href="/Rakib_B_TraineeResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-medium inline-flex items-center gap-1"
+                title="View or download Rakib B's Trainee Resume (PDF)"
+              >
+                <span>Rakib_B_TraineeResume.pdf</span>
+                <span className="text-[10px]">↗</span>
+              </a>
+            </td>
+          </tr>
+
           {/* Infobox Subheader: Career & notable work */}
           <tr>
             <th colSpan="2" className="wiki-infobox-header">

@@ -41,7 +41,17 @@ export default function ContactSection() {
             {idx < contactData.profiles.length - 2 && ", "}
             {idx === contactData.profiles.length - 2 && ", and "}
           </React.Fragment>
-        ))}.
+        ))}. For recruiters and professional evaluations, a curriculum vitae is archived at{" "}
+        <a
+          href="/Rakib_B_TraineeResume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#0645ad] dark:text-[#6da8ff] hover:underline font-medium inline-flex items-center gap-0.5"
+          title="Download or view Rakib B's Trainee Resume (PDF)"
+        >
+          <span>Rakib_B_TraineeResume.pdf</span>
+          <span className="text-xs">↗</span>
+        </a>.
       </p>
     </section>
   );

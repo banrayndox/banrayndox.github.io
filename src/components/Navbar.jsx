@@ -78,6 +78,17 @@ export default function Navbar() {
           >
             Writing
           </button>
+          <span className="text-gray-300 dark:text-gray-600">|</span>
+          <a
+            href="/Rakib_B_TraineeResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-[#0645ad] dark:text-[#6da8ff] cursor-pointer text-xs font-semibold inline-flex items-center gap-0.5"
+            title="View or download Rakib B's Resume (PDF)"
+          >
+            <span>Resume</span>
+            <span className="text-[10px]">↗</span>
+          </a>
 
           <span className="text-gray-300 dark:text-gray-600">|</span>
 
@@ -144,6 +155,16 @@ export default function Navbar() {
               {item.label}
             </button>
           ))}
+          <a
+            href="/Rakib_B_TraineeResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0645ad] dark:text-[#6da8ff] font-medium hover:underline inline-flex items-center gap-0.5 text-xs sm:text-[13px] ml-1"
+            title="Download or view Rakib B's Resume (PDF)"
+          >
+            <span>Resume</span>
+            <span className="text-[10px]">↗</span>
+          </a>
         </nav>
 
         {/* Mobile Header Bar & Dropdown Toggle */}
@@ -177,6 +198,15 @@ export default function Navbar() {
                 {item.label} →
               </button>
             ))}
+            <a
+              href="/Rakib_B_TraineeResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-left py-1.5 px-2 text-[#0645ad] dark:text-[#6da8ff] hover:underline hover:bg-gray-100 dark:hover:bg-[#202122] rounded cursor-pointer font-bold border border-[#a2a9b1] dark:border-[#54595d] col-span-2 flex items-center justify-between"
+            >
+              <span>📄 View / Download Resume (PDF)</span>
+              <span>↗</span>
+            </a>
           </div>
         </div>
       )}
